@@ -31,3 +31,7 @@ C:\Users\amiscall\Source\Repos\RiverWatch_TestWebAPI\TestRiverWatchApi\bin\Debug
 C:\Users\amiscall\Source\Repos\RiverWatch_TestWebAPI\TestRiverWatchApi\bin\Debug\Newtonsoft.Json.xml
 C:\Users\amiscall\Source\Repos\RiverWatch_TestWebAPI\TestRiverWatchApi\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\amiscall\Source\Repos\RiverWatch_TestWebAPI\TestRiverWatchApi\obj\Debug\TestRiverWatchApi.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Source\Repos\WebAPIWindowsFormTest\TestRiverWatchApi\bin\Debug\TestRiverWatchApi.exe.config
+C:\Users\Administrator\Source\Repos\WebAPIWindowsFormTest\TestRiverWatchApi\obj\Debug\TestRiverWatchApi.exe
+C:\Users\Administrator\Source\Repos\WebAPIWindowsFormTest\TestRiverWatchApi\obj\Debug\TestRiverWatchApi.pdb
+C:\Users\Administrator\Source\Repos\WebAPIWindowsFormTest\TestRiverWatchApi\obj\Debug\TestRiverWatchApi.csprojResolveAssemblyReference.cache

@@ -40,7 +40,7 @@ namespace TestRiverWatchApi
                     string path_GetICPBarCodeExists = "InboundICPFinals/GetICPBarCodeExists" + parametersICPBarCode;
 
                     bool iCPBarCodeExists = await CheckExists(path_GetICPBarCodeExists, "GetICPBarCodeExists");
-                    Console.WriteLine($"iCPBarCodeExists {iCPBarCodeExists}");
+                    Console.WriteLine("iCPBarCodeExists {0}", iCPBarCodeExists);
                 }
                 else
                 {
@@ -99,7 +99,7 @@ namespace TestRiverWatchApi
             string password = Properties.Settings.Default.WebAPI_Password;
             var byteArray = Encoding.ASCII.GetBytes(username + ":" + password);  // build http user name and pwd, this is convention, not our doing... 
                                                                                  // add user name and password, after encoding, to request header, to base64, which is convention, we have no choice (??)
-            client.BaseAddress = new Uri(Properties.Settings.Default.WebAPI_URI_Localhost);
+            client.BaseAddress = new Uri(Properties.Settings.Default.WebAPI_URI_Localhost); // WebAPI_URI_Bill_Local
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(byteArray));
