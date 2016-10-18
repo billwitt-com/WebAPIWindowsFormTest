@@ -40,7 +40,7 @@ namespace TestRiverWatchApi
                     string path_GetICPBarCodeExists = "InboundICPFinals/GetICPBarCodeExists" + parametersICPBarCode;
 
                     bool iCPBarCodeExists = await CheckExists(path_GetICPBarCodeExists, "GetICPBarCodeExists");
-                    Console.WriteLine($"iCPBarCodeExists {iCPBarCodeExists}");
+                    Console.WriteLine("iCPBarCodeExists {0}", iCPBarCodeExists);
                 }
                 else
                 {
@@ -52,7 +52,7 @@ namespace TestRiverWatchApi
                     string path_GetICPBarCodeExists = "InboundICPFinals/GetICPBarCodeExists" + parametersICPBarCode;
 
                     bool iCPBarCodeExists = await CheckExists(path_GetICPBarCodeExists, "GetICPBarCodeExists");
-                    Console.WriteLine($"iCPBarCodeExists {iCPBarCodeExists}");
+                    Console.WriteLine("iCPBarCodeExists {0}", iCPBarCodeExists);
 
                     //**************************************************************Create InboundICPFinal (PostInboundICPFinal) ********************************************************
                     if (!iCPBarCodeExists)
@@ -64,7 +64,7 @@ namespace TestRiverWatchApi
                         InboundICPFinal inboundICPFinal = MI.makeICP(barcode, type, tableSampleID);
 
                         var updatedInboundICPFinal = await PostInboundICPFinal(path_PostInboundICPFinal, inboundICPFinal);
-                        Console.WriteLine($"UpdatedInboundICPFinal ID: {updatedInboundICPFinal.ID.ToString()}");
+                        Console.WriteLine("UpdatedInboundICPFinal ID: {0}", updatedInboundICPFinal.ID.ToString());
                     }
 
                     //************************************************************** Check if Bar Code exists in New Exp table (GetNewExpBarCodeExists) **********************************
@@ -74,7 +74,7 @@ namespace TestRiverWatchApi
                     string path_GetNewExpBarCodeExists = "InboundICPFinals/GetNewExpBarCodeExists" + parametersNewExpBarCode;
 
                     bool newExpBarCodeExists = await CheckExists(path_GetNewExpBarCodeExists, "GetNewExpBarCodeExists"); 
-                    Console.WriteLine($"newExpBarCodeExists {newExpBarCodeExists}");
+                    Console.WriteLine("newExpBarCodeExists {0}", newExpBarCodeExists);
 
                     //************************************************************** Check if Sample exists in Samples table (GetSampleExists) **********************************
                     var urlParametersSampleNumber = new Dictionary<string, string>();
@@ -83,7 +83,7 @@ namespace TestRiverWatchApi
                     string path_GetSampleExists = "InboundICPFinals/GetSampleExists" + parametersSampleNumber;
 
                     bool sampleExists = await CheckExists(path_GetSampleExists, "GetSampleExists");
-                    Console.WriteLine($"sampleExists {sampleExists}");
+                    Console.WriteLine("sampleExists {0}", sampleExists);
                 }                
             }
             catch (Exception ex)
