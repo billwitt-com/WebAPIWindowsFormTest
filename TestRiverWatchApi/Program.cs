@@ -149,17 +149,17 @@ namespace TestRiverWatchApi
             return uriBuilder.Query;
         }
 
-        private static void HandleErrors(int responseStatusCode, string responseReasonPhrase, string fromPage, string stackTrace, string ErrorType = "")
+        private static void HandleErrors(int responseStatusCode, string responseReasonPhrase, string fromPage, string stackTrace, string errorType = "")
         {
             string msg = string.Empty;
-            if (!string.IsNullOrEmpty(ErrorType) && ErrorType.Equals("Main"))
+            if (!string.IsNullOrEmpty(errorType) && errorType.Equals("Main"))
             {
                 msg = string.Format("Error in Main. StackTrace: {0}", stackTrace);
             }
-            else if (!string.IsNullOrEmpty(ErrorType) && ErrorType.Equals("APICall"))
+            else if (!string.IsNullOrEmpty(errorType) && errorType.Equals("APICall"))
             {
-                msg = string.Format("Error in GetICPBarCodeExists. response.StatusCode: {0} response.ReasonPhrase {1}",
-                                                    responseStatusCode, responseReasonPhrase);
+                msg = string.Format("Error in {0}. response.StatusCode: {1} response.ReasonPhrase {2}",
+                                                    errorType, responseStatusCode, responseReasonPhrase);
             }
 
             Console.WriteLine(msg);
