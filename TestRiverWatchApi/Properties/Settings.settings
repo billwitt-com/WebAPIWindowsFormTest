@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TestRiverWatchApi.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WebAPI_UserName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Bill</Value>
+    </Setting>
+    <Setting Name="WebAPI_Password" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Password1</Value>
+    </Setting>
+    <Setting Name="WebAPI_URI_Bill_Local" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://dev.coloradoriverwatch.com/api/InboundICPFinals</Value>
+    </Setting>
+    <Setting Name="WebAPI_URI_Azure_Test" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://coloradoriverwatchapi.azurewebsites.net/api/</Value>
+    </Setting>
+    <Setting Name="WebAPI_URI_Localhost" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:21028/api/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

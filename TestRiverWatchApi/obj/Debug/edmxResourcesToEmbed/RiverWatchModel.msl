@@ -1,0 +1,1327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RiverWatchModelStoreContainer" CdmEntityContainer="RiverWatchEntities">
+    <EntitySetMapping Name="ControlPermissions">
+      <EntityTypeMapping TypeName="RiverWatchModel.ControlPermission">
+        <MappingFragment StoreEntitySet="ControlPermissions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="ControlID" ColumnName="ControlID" />
+          <ScalarProperty Name="RoleValue" ColumnName="RoleValue" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ErrorLogs">
+      <EntityTypeMapping TypeName="RiverWatchModel.ErrorLog">
+        <MappingFragment StoreEntitySet="ErrorLog">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="FromPage" ColumnName="FromPage" />
+          <ScalarProperty Name="StackTrace" ColumnName="StackTrace" />
+          <ScalarProperty Name="Severity" ColumnName="Severity" />
+          <ScalarProperty Name="LoggedInUser" ColumnName="LoggedInUser" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FileStorages">
+      <EntityTypeMapping TypeName="RiverWatchModel.FileStorage">
+        <MappingFragment StoreEntitySet="FileStorage">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GearConfigs">
+      <EntityTypeMapping TypeName="RiverWatchModel.GearConfig">
+        <MappingFragment StoreEntitySet="GearConfig">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FieldGearID" ColumnName="FieldGearID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InboundICPFinals">
+      <EntityTypeMapping TypeName="RiverWatchModel.InboundICPFinal">
+        <MappingFragment StoreEntitySet="InboundICPFinal">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="tblSampleID" ColumnName="tblSampleID" />
+          <ScalarProperty Name="DUPLICATE" ColumnName="DUPLICATE" />
+          <ScalarProperty Name="AL_D" ColumnName="AL_D" />
+          <ScalarProperty Name="AL_T" ColumnName="AL_T" />
+          <ScalarProperty Name="AS_D" ColumnName="AS_D" />
+          <ScalarProperty Name="AS_T" ColumnName="AS_T" />
+          <ScalarProperty Name="CA_D" ColumnName="CA_D" />
+          <ScalarProperty Name="CA_T" ColumnName="CA_T" />
+          <ScalarProperty Name="CD_D" ColumnName="CD_D" />
+          <ScalarProperty Name="CD_T" ColumnName="CD_T" />
+          <ScalarProperty Name="CU_D" ColumnName="CU_D" />
+          <ScalarProperty Name="CU_T" ColumnName="CU_T" />
+          <ScalarProperty Name="FE_D" ColumnName="FE_D" />
+          <ScalarProperty Name="FE_T" ColumnName="FE_T" />
+          <ScalarProperty Name="PB_D" ColumnName="PB_D" />
+          <ScalarProperty Name="PB_T" ColumnName="PB_T" />
+          <ScalarProperty Name="MG_D" ColumnName="MG_D" />
+          <ScalarProperty Name="MG_T" ColumnName="MG_T" />
+          <ScalarProperty Name="MN_D" ColumnName="MN_D" />
+          <ScalarProperty Name="MN_T" ColumnName="MN_T" />
+          <ScalarProperty Name="SE_D" ColumnName="SE_D" />
+          <ScalarProperty Name="SE_T" ColumnName="SE_T" />
+          <ScalarProperty Name="ZN_D" ColumnName="ZN_D" />
+          <ScalarProperty Name="ZN_T" ColumnName="ZN_T" />
+          <ScalarProperty Name="NA_D" ColumnName="NA_D" />
+          <ScalarProperty Name="NA_T" ColumnName="NA_T" />
+          <ScalarProperty Name="K_D" ColumnName="K_D" />
+          <ScalarProperty Name="K_T" ColumnName="K_T" />
+          <ScalarProperty Name="ANADATE" ColumnName="ANADATE" />
+          <ScalarProperty Name="COMPLETE" ColumnName="COMPLETE" />
+          <ScalarProperty Name="DATE_SENT" ColumnName="DATE_SENT" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="Edited" ColumnName="Edited" />
+          <ScalarProperty Name="Saved" ColumnName="Saved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InboundICPOrigionals">
+      <EntityTypeMapping TypeName="RiverWatchModel.InboundICPOrigional">
+        <MappingFragment StoreEntitySet="InboundICPOrigional">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="tblSampleID" ColumnName="tblSampleID" />
+          <ScalarProperty Name="DUPLICATE" ColumnName="DUPLICATE" />
+          <ScalarProperty Name="AL_D" ColumnName="AL_D" />
+          <ScalarProperty Name="AL_T" ColumnName="AL_T" />
+          <ScalarProperty Name="AS_D" ColumnName="AS_D" />
+          <ScalarProperty Name="AS_T" ColumnName="AS_T" />
+          <ScalarProperty Name="CA_D" ColumnName="CA_D" />
+          <ScalarProperty Name="CA_T" ColumnName="CA_T" />
+          <ScalarProperty Name="CD_D" ColumnName="CD_D" />
+          <ScalarProperty Name="CD_T" ColumnName="CD_T" />
+          <ScalarProperty Name="CU_D" ColumnName="CU_D" />
+          <ScalarProperty Name="CU_T" ColumnName="CU_T" />
+          <ScalarProperty Name="FE_D" ColumnName="FE_D" />
+          <ScalarProperty Name="FE_T" ColumnName="FE_T" />
+          <ScalarProperty Name="PB_D" ColumnName="PB_D" />
+          <ScalarProperty Name="PB_T" ColumnName="PB_T" />
+          <ScalarProperty Name="MG_D" ColumnName="MG_D" />
+          <ScalarProperty Name="MG_T" ColumnName="MG_T" />
+          <ScalarProperty Name="MN_D" ColumnName="MN_D" />
+          <ScalarProperty Name="MN_T" ColumnName="MN_T" />
+          <ScalarProperty Name="SE_D" ColumnName="SE_D" />
+          <ScalarProperty Name="SE_T" ColumnName="SE_T" />
+          <ScalarProperty Name="ZN_D" ColumnName="ZN_D" />
+          <ScalarProperty Name="ZN_T" ColumnName="ZN_T" />
+          <ScalarProperty Name="NA_D" ColumnName="NA_D" />
+          <ScalarProperty Name="NA_T" ColumnName="NA_T" />
+          <ScalarProperty Name="K_D" ColumnName="K_D" />
+          <ScalarProperty Name="K_T" ColumnName="K_T" />
+          <ScalarProperty Name="ANADATE" ColumnName="ANADATE" />
+          <ScalarProperty Name="COMPLETE" ColumnName="COMPLETE" />
+          <ScalarProperty Name="DATE_SENT" ColumnName="DATE_SENT" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="Edited" ColumnName="Edited" />
+          <ScalarProperty Name="Saved" ColumnName="Saved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InboundSamples">
+      <EntityTypeMapping TypeName="RiverWatchModel.InboundSample">
+        <MappingFragment StoreEntitySet="InboundSamples">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StationNum" ColumnName="StationNum" />
+          <ScalarProperty Name="SampleID" ColumnName="SampleID" />
+          <ScalarProperty Name="txtSampleID" ColumnName="txtSampleID" />
+          <ScalarProperty Name="KitNum" ColumnName="KitNum" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="USGSFlow" ColumnName="USGSFlow" />
+          <ScalarProperty Name="PH" ColumnName="PH" />
+          <ScalarProperty Name="TempC" ColumnName="TempC" />
+          <ScalarProperty Name="PhenAlk" ColumnName="PhenAlk" />
+          <ScalarProperty Name="TotalAlk" ColumnName="TotalAlk" />
+          <ScalarProperty Name="TotalHard" ColumnName="TotalHard" />
+          <ScalarProperty Name="DO" ColumnName="DO" />
+          <ScalarProperty Name="DOsat" ColumnName="DOsat" />
+          <ScalarProperty Name="Tag" ColumnName="Tag" />
+          <ScalarProperty Name="Chk" ColumnName="Chk" />
+          <ScalarProperty Name="EntryType" ColumnName="EntryType" />
+          <ScalarProperty Name="EntryStaff" ColumnName="EntryStaff" />
+          <ScalarProperty Name="MetalsNormal" ColumnName="MetalsNormal" />
+          <ScalarProperty Name="MetalsBlnk" ColumnName="MetalsBlnk" />
+          <ScalarProperty Name="MetalsDupe" ColumnName="MetalsDupe" />
+          <ScalarProperty Name="Bugs" ColumnName="Bugs" />
+          <ScalarProperty Name="BugsQA" ColumnName="BugsQA" />
+          <ScalarProperty Name="TSS" ColumnName="TSS" />
+          <ScalarProperty Name="CS" ColumnName="CS" />
+          <ScalarProperty Name="NP" ColumnName="NP" />
+          <ScalarProperty Name="TSSDupe" ColumnName="TSSDupe" />
+          <ScalarProperty Name="CSDupe" ColumnName="CSDupe" />
+          <ScalarProperty Name="NPDupe" ColumnName="NPDupe" />
+          <ScalarProperty Name="FieldValid" ColumnName="FieldValid" />
+          <ScalarProperty Name="MetalsStat" ColumnName="MetalsStat" />
+          <ScalarProperty Name="FinalCheck" ColumnName="FinalCheck" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="DateReceived" ColumnName="DateReceived" />
+          <ScalarProperty Name="DataSheetIncluded" ColumnName="DataSheetIncluded" />
+          <ScalarProperty Name="MissingDataSheetReqDate" ColumnName="MissingDataSheetReqDate" />
+          <ScalarProperty Name="ChainOfCustody" ColumnName="ChainOfCustody" />
+          <ScalarProperty Name="MissingDataSheetReceived" ColumnName="MissingDataSheetReceived" />
+          <ScalarProperty Name="PassValStep" ColumnName="PassValStep" />
+          <ScalarProperty Name="tblSampleID" ColumnName="tblSampleID" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lachats">
+      <EntityTypeMapping TypeName="RiverWatchModel.Lachat">
+        <MappingFragment StoreEntitySet="Lachat">
+          <ScalarProperty Name="inbLachatID" ColumnName="inbLachatID" />
+          <ScalarProperty Name="Batch" ColumnName="Batch" />
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="SampleDescription" ColumnName="SampleDescription" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="Parameter" ColumnName="Parameter" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="AnalDate" ColumnName="AnalDate" />
+          <ScalarProperty Name="CONHI" ColumnName="CONHI" />
+          <ScalarProperty Name="RPDDivPctREC" ColumnName="RPDDivPctREC" />
+          <ScalarProperty Name="CHANGED" ColumnName="CHANGED" />
+          <ScalarProperty Name="NumChanged" ColumnName="NumChanged" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="PassValStep" ColumnName="PassValStep" />
+          <ScalarProperty Name="tblSampleID" ColumnName="tblSampleID" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="Validated" ColumnName="Validated" />
+          <ScalarProperty Name="BlkDup" ColumnName="BlkDup" />
+          <ScalarProperty Name="Failed" ColumnName="Failed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MetalBarCodes">
+      <EntityTypeMapping TypeName="RiverWatchModel.MetalBarCode">
+        <MappingFragment StoreEntitySet="MetalBarCode">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SampleNumber" ColumnName="SampleNumber" />
+          <ScalarProperty Name="NumberSample" ColumnName="NumberSample" />
+          <ScalarProperty Name="LabID" ColumnName="LabID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Filtered" ColumnName="Filtered" />
+          <ScalarProperty Name="ContainMetal" ColumnName="ContainMetal" />
+          <ScalarProperty Name="BoxNumber" ColumnName="BoxNumber" />
+          <ScalarProperty Name="Verified" ColumnName="Verified" />
+          <ScalarProperty Name="LogDate" ColumnName="LogDate" />
+          <ScalarProperty Name="AnalyzeDate" ColumnName="AnalyzeDate" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="SampleID" ColumnName="SampleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NEWexpWaters">
+      <EntityTypeMapping TypeName="RiverWatchModel.NEWexpWater">
+        <MappingFragment StoreEntitySet="NEWexpWater">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="tblSampleID" ColumnName="tblSampleID" />
+          <ScalarProperty Name="SampleNumber" ColumnName="SampleNumber" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="WaterShed" ColumnName="WaterShed" />
+          <ScalarProperty Name="River_CD" ColumnName="River_CD" />
+          <ScalarProperty Name="RiverName" ColumnName="RiverName" />
+          <ScalarProperty Name="KitNumber" ColumnName="KitNumber" />
+          <ScalarProperty Name="OrganizationName" ColumnName="OrganizationName" />
+          <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+          <ScalarProperty Name="StationNumber" ColumnName="StationNumber" />
+          <ScalarProperty Name="TypeCode" ColumnName="TypeCode" />
+          <ScalarProperty Name="StationName" ColumnName="StationName" />
+          <ScalarProperty Name="MetalsBarCode" ColumnName="MetalsBarCode" />
+          <ScalarProperty Name="NutrientBarCode" ColumnName="NutrientBarCode" />
+          <ScalarProperty Name="FieldBarCode" ColumnName="FieldBarCode" />
+          <ScalarProperty Name="BugsBarCode" ColumnName="BugsBarCode" />
+          <ScalarProperty Name="SampleDate" ColumnName="SampleDate" />
+          <ScalarProperty Name="USGS_Flow" ColumnName="USGS_Flow" />
+          <ScalarProperty Name="PH" ColumnName="PH" />
+          <ScalarProperty Name="TempC" ColumnName="TempC" />
+          <ScalarProperty Name="PHEN_ALK" ColumnName="PHEN_ALK" />
+          <ScalarProperty Name="TOTAL_ALK" ColumnName="TOTAL_ALK" />
+          <ScalarProperty Name="TOTAL_HARD" ColumnName="TOTAL_HARD" />
+          <ScalarProperty Name="DO_MGL" ColumnName="DO_MGL" />
+          <ScalarProperty Name="DOSAT" ColumnName="DOSAT" />
+          <ScalarProperty Name="AL_D" ColumnName="AL_D" />
+          <ScalarProperty Name="AL_T" ColumnName="AL_T" />
+          <ScalarProperty Name="AS_D" ColumnName="AS_D" />
+          <ScalarProperty Name="AS_T" ColumnName="AS_T" />
+          <ScalarProperty Name="CA_D" ColumnName="CA_D" />
+          <ScalarProperty Name="CA_T" ColumnName="CA_T" />
+          <ScalarProperty Name="CD_D" ColumnName="CD_D" />
+          <ScalarProperty Name="CD_T" ColumnName="CD_T" />
+          <ScalarProperty Name="CU_D" ColumnName="CU_D" />
+          <ScalarProperty Name="CU_T" ColumnName="CU_T" />
+          <ScalarProperty Name="FE_D" ColumnName="FE_D" />
+          <ScalarProperty Name="FE_T" ColumnName="FE_T" />
+          <ScalarProperty Name="MG_D" ColumnName="MG_D" />
+          <ScalarProperty Name="MG_T" ColumnName="MG_T" />
+          <ScalarProperty Name="MN_D" ColumnName="MN_D" />
+          <ScalarProperty Name="MN_T" ColumnName="MN_T" />
+          <ScalarProperty Name="PB_D" ColumnName="PB_D" />
+          <ScalarProperty Name="PB_T" ColumnName="PB_T" />
+          <ScalarProperty Name="SE_D" ColumnName="SE_D" />
+          <ScalarProperty Name="SE_T" ColumnName="SE_T" />
+          <ScalarProperty Name="ZN_D" ColumnName="ZN_D" />
+          <ScalarProperty Name="ZN_T" ColumnName="ZN_T" />
+          <ScalarProperty Name="NA_D" ColumnName="NA_D" />
+          <ScalarProperty Name="NA_T" ColumnName="NA_T" />
+          <ScalarProperty Name="K_D" ColumnName="K_D" />
+          <ScalarProperty Name="K_T" ColumnName="K_T" />
+          <ScalarProperty Name="Rep" ColumnName="Rep" />
+          <ScalarProperty Name="Ammonia" ColumnName="Ammonia" />
+          <ScalarProperty Name="Chloride" ColumnName="Chloride" />
+          <ScalarProperty Name="ChlorophyllA" ColumnName="ChlorophyllA" />
+          <ScalarProperty Name="DOC" ColumnName="DOC" />
+          <ScalarProperty Name="NN" ColumnName="NN" />
+          <ScalarProperty Name="OP" ColumnName="OP" />
+          <ScalarProperty Name="Sulfate" ColumnName="Sulfate" />
+          <ScalarProperty Name="totN" ColumnName="totN" />
+          <ScalarProperty Name="totP" ColumnName="totP" />
+          <ScalarProperty Name="TKN" ColumnName="TKN" />
+          <ScalarProperty Name="orgN" ColumnName="orgN" />
+          <ScalarProperty Name="TSS" ColumnName="TSS" />
+          <ScalarProperty Name="Batch" ColumnName="Batch" />
+          <ScalarProperty Name="SampleComments" ColumnName="SampleComments" />
+          <ScalarProperty Name="FieldComment" ColumnName="FieldComment" />
+          <ScalarProperty Name="NutrientComment" ColumnName="NutrientComment" />
+          <ScalarProperty Name="MetalsComment" ColumnName="MetalsComment" />
+          <ScalarProperty Name="BugsComments" ColumnName="BugsComments" />
+          <ScalarProperty Name="BenthicsComments" ColumnName="BenthicsComments" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="BadBlank" ColumnName="BadBlank" />
+          <ScalarProperty Name="BadDuplicate" ColumnName="BadDuplicate" />
+          <ScalarProperty Name="BadSample" ColumnName="BadSample" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NutrientBarCodes">
+      <EntityTypeMapping TypeName="RiverWatchModel.NutrientBarCode">
+        <MappingFragment StoreEntitySet="NutrientBarCode">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SampleID" ColumnName="SampleID" />
+          <ScalarProperty Name="SampleNumber" ColumnName="SampleNumber" />
+          <ScalarProperty Name="LabID" ColumnName="LabID" />
+          <ScalarProperty Name="Batch" ColumnName="Batch" />
+          <ScalarProperty Name="Done" ColumnName="Done" />
+          <ScalarProperty Name="LogDate" ColumnName="LogDate" />
+          <ScalarProperty Name="AnalyzeDate" ColumnName="AnalyzeDate" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="TotalPhos" ColumnName="TotalPhos" />
+          <ScalarProperty Name="OrthoPhos" ColumnName="OrthoPhos" />
+          <ScalarProperty Name="TotalNitro" ColumnName="TotalNitro" />
+          <ScalarProperty Name="NitrateNitrite" ColumnName="NitrateNitrite" />
+          <ScalarProperty Name="Ammonia" ColumnName="Ammonia" />
+          <ScalarProperty Name="DOC" ColumnName="DOC" />
+          <ScalarProperty Name="Chloride" ColumnName="Chloride" />
+          <ScalarProperty Name="Sulfate" ColumnName="Sulfate" />
+          <ScalarProperty Name="TSS" ColumnName="TSS" />
+          <ScalarProperty Name="ChlorA" ColumnName="ChlorA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NutrientDatas">
+      <EntityTypeMapping TypeName="RiverWatchModel.NutrientData">
+        <MappingFragment StoreEntitySet="NutrientData">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
+          <ScalarProperty Name="Batch" ColumnName="Batch" />
+          <ScalarProperty Name="TypeCode" ColumnName="TypeCode" />
+          <ScalarProperty Name="SampleNumber" ColumnName="SampleNumber" />
+          <ScalarProperty Name="TotalPhos" ColumnName="TotalPhos" />
+          <ScalarProperty Name="TotalPhos_CH" ColumnName="TotalPhos_CH" />
+          <ScalarProperty Name="OrthoPhos" ColumnName="OrthoPhos" />
+          <ScalarProperty Name="OrthoPhos_CH" ColumnName="OrthoPhos_CH" />
+          <ScalarProperty Name="TotalNitro" ColumnName="TotalNitro" />
+          <ScalarProperty Name="TotalNitro_CH" ColumnName="TotalNitro_CH" />
+          <ScalarProperty Name="NitrateNitrite" ColumnName="NitrateNitrite" />
+          <ScalarProperty Name="NitrateNitrite_CH" ColumnName="NitrateNitrite_CH" />
+          <ScalarProperty Name="Ammonia" ColumnName="Ammonia" />
+          <ScalarProperty Name="Ammonia_CH" ColumnName="Ammonia_CH" />
+          <ScalarProperty Name="DOC" ColumnName="DOC" />
+          <ScalarProperty Name="DOC_CH" ColumnName="DOC_CH" />
+          <ScalarProperty Name="Chloride" ColumnName="Chloride" />
+          <ScalarProperty Name="Chloride_CH" ColumnName="Chloride_CH" />
+          <ScalarProperty Name="Sulfate" ColumnName="Sulfate" />
+          <ScalarProperty Name="Sulfate_CH" ColumnName="Sulfate_CH" />
+          <ScalarProperty Name="TSS" ColumnName="TSS" />
+          <ScalarProperty Name="TSS_CH" ColumnName="TSS_CH" />
+          <ScalarProperty Name="ChlorA" ColumnName="ChlorA" />
+          <ScalarProperty Name="ChlorA_CH" ColumnName="ChlorA_CH" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="Validated" ColumnName="Validated" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NutrientLimits">
+      <EntityTypeMapping TypeName="RiverWatchModel.NutrientLimit">
+        <MappingFragment StoreEntitySet="NutrientLimits">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Element" ColumnName="Element" />
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="Reporting" ColumnName="Reporting" />
+          <ScalarProperty Name="MDL" ColumnName="MDL" />
+          <ScalarProperty Name="DvsTDifference" ColumnName="DvsTDifference" />
+          <ScalarProperty Name="HighLimit" ColumnName="HighLimit" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrgStatus">
+      <EntityTypeMapping TypeName="RiverWatchModel.OrgStatu">
+        <MappingFragment StoreEntitySet="OrgStatus">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+          <ScalarProperty Name="ContractStartDate" ColumnName="ContractStartDate" />
+          <ScalarProperty Name="ContractEndDate" ColumnName="ContractEndDate" />
+          <ScalarProperty Name="ContractSigned" ColumnName="ContractSigned" />
+          <ScalarProperty Name="ContractSignedDate" ColumnName="ContractSignedDate" />
+          <ScalarProperty Name="SiteVisited" ColumnName="SiteVisited" />
+          <ScalarProperty Name="VolunteerTimeSheet1" ColumnName="VolunteerTimeSheet1" />
+          <ScalarProperty Name="VolunteerTimeShee2" ColumnName="VolunteerTimeShee2" />
+          <ScalarProperty Name="VolunteerTimeSheet3" ColumnName="VolunteerTimeSheet3" />
+          <ScalarProperty Name="VolunteerTimeSheet4" ColumnName="VolunteerTimeSheet4" />
+          <ScalarProperty Name="DataEnteredElectronically1" ColumnName="DataEnteredElectronically1" />
+          <ScalarProperty Name="DataEnteredElectronically2" ColumnName="DataEnteredElectronically2" />
+          <ScalarProperty Name="DataEnteredElectronically3" ColumnName="DataEnteredElectronically3" />
+          <ScalarProperty Name="DataEnteredElectronically4" ColumnName="DataEnteredElectronically4" />
+          <ScalarProperty Name="SampleShipped1" ColumnName="SampleShipped1" />
+          <ScalarProperty Name="SampleShipped2" ColumnName="SampleShipped2" />
+          <ScalarProperty Name="SampleShipped3" ColumnName="SampleShipped3" />
+          <ScalarProperty Name="SampleShipped4" ColumnName="SampleShipped4" />
+          <ScalarProperty Name="NumberOfSamplesJan" ColumnName="NumberOfSamplesJan" />
+          <ScalarProperty Name="NumberOfSamplesFeb" ColumnName="NumberOfSamplesFeb" />
+          <ScalarProperty Name="NumberOfSamplesMar" ColumnName="NumberOfSamplesMar" />
+          <ScalarProperty Name="NumberOfSamplesApr" ColumnName="NumberOfSamplesApr" />
+          <ScalarProperty Name="NumberOfSamplesMay" ColumnName="NumberOfSamplesMay" />
+          <ScalarProperty Name="NumberOfSamplesJun" ColumnName="NumberOfSamplesJun" />
+          <ScalarProperty Name="NumberOfSamplesJul" ColumnName="NumberOfSamplesJul" />
+          <ScalarProperty Name="NumberOfSamplesAug" ColumnName="NumberOfSamplesAug" />
+          <ScalarProperty Name="NumberOfSamplesSep" ColumnName="NumberOfSamplesSep" />
+          <ScalarProperty Name="NumberOfSamplesOct" ColumnName="NumberOfSamplesOct" />
+          <ScalarProperty Name="NumberOfSamplesNov" ColumnName="NumberOfSamplesNov" />
+          <ScalarProperty Name="NumberOfSamplesDec" ColumnName="NumberOfSamplesDec" />
+          <ScalarProperty Name="Nutrient1Collected" ColumnName="Nutrient1Collected" />
+          <ScalarProperty Name="Nutrient2Collected" ColumnName="Nutrient2Collected" />
+          <ScalarProperty Name="BugCollected" ColumnName="BugCollected" />
+          <ScalarProperty Name="UnknownSpringRecordedDate" ColumnName="UnknownSpringRecordedDate" />
+          <ScalarProperty Name="UnknownFallRecordedDate" ColumnName="UnknownFallRecordedDate" />
+          <ScalarProperty Name="NumberOfSamplesBlank" ColumnName="NumberOfSamplesBlank" />
+          <ScalarProperty Name="NumberOfSamplesDuplicate" ColumnName="NumberOfSamplesDuplicate" />
+          <ScalarProperty Name="TroubleComment" ColumnName="TroubleComment" />
+          <ScalarProperty Name="NoteComment" ColumnName="NoteComment" />
+          <ScalarProperty Name="HardshipComment" ColumnName="HardshipComment" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="NumberOfMetalsBlank" ColumnName="NumberOfMetalsBlank" />
+          <ScalarProperty Name="NumberOfMetalsDuplicate" ColumnName="NumberOfMetalsDuplicate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="projects">
+      <EntityTypeMapping TypeName="RiverWatchModel.project">
+        <MappingFragment StoreEntitySet="project">
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="StoretUploaded" ColumnName="StoretUploaded" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectStations">
+      <EntityTypeMapping TypeName="RiverWatchModel.ProjectStation">
+        <MappingFragment StoreEntitySet="ProjectStation">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="StationNumber" ColumnName="StationNumber" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="RiverWatchModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Samples">
+      <EntityTypeMapping TypeName="RiverWatchModel.Sample">
+        <MappingFragment StoreEntitySet="Samples">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SampleID" ColumnName="SampleID" />
+          <ScalarProperty Name="StationID" ColumnName="StationID" />
+          <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+          <ScalarProperty Name="SampleNumber" ColumnName="SampleNumber" />
+          <ScalarProperty Name="NumberSample" ColumnName="NumberSample" />
+          <ScalarProperty Name="DateCollected" ColumnName="DateCollected" />
+          <ScalarProperty Name="TimeCollected" ColumnName="TimeCollected" />
+          <ScalarProperty Name="DateReceived" ColumnName="DateReceived" />
+          <ScalarProperty Name="DataSheetIncluded" ColumnName="DataSheetIncluded" />
+          <ScalarProperty Name="MissingDataSheetReqDate" ColumnName="MissingDataSheetReqDate" />
+          <ScalarProperty Name="ChainOfCustody" ColumnName="ChainOfCustody" />
+          <ScalarProperty Name="MissingDataSheetReceived" ColumnName="MissingDataSheetReceived" />
+          <ScalarProperty Name="NoMetals" ColumnName="NoMetals" />
+          <ScalarProperty Name="PhysicalHabitat" ColumnName="PhysicalHabitat" />
+          <ScalarProperty Name="Bug" ColumnName="Bug" />
+          <ScalarProperty Name="NoNutrient" ColumnName="NoNutrient" />
+          <ScalarProperty Name="TotalSuspendedSolids" ColumnName="TotalSuspendedSolids" />
+          <ScalarProperty Name="NitratePhosphorus" ColumnName="NitratePhosphorus" />
+          <ScalarProperty Name="DuplicatedTSS" ColumnName="DuplicatedTSS" />
+          <ScalarProperty Name="DuplicatedNP" ColumnName="DuplicatedNP" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="ChlorideSulfate" ColumnName="ChlorideSulfate" />
+          <ScalarProperty Name="BlankMetals" ColumnName="BlankMetals" />
+          <ScalarProperty Name="DuplicatedMetals" ColumnName="DuplicatedMetals" />
+          <ScalarProperty Name="BugsQA" ColumnName="BugsQA" />
+          <ScalarProperty Name="DuplicatedCS" ColumnName="DuplicatedCS" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stations">
+      <EntityTypeMapping TypeName="RiverWatchModel.Station">
+        <MappingFragment StoreEntitySet="Station">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StationNumber" ColumnName="StationNumber" />
+          <ScalarProperty Name="River" ColumnName="River" />
+          <ScalarProperty Name="AquaticModelIndex" ColumnName="AquaticModelIndex" />
+          <ScalarProperty Name="WaterCode" ColumnName="WaterCode" />
+          <ScalarProperty Name="WaterBodyID" ColumnName="WaterBodyID" />
+          <ScalarProperty Name="StationType" ColumnName="StationType" />
+          <ScalarProperty Name="QUADI" ColumnName="QUADI" />
+          <ScalarProperty Name="Township" ColumnName="Township" />
+          <ScalarProperty Name="Range" ColumnName="Range" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="QuaterSection" ColumnName="QuaterSection" />
+          <ScalarProperty Name="Grid" ColumnName="Grid" />
+          <ScalarProperty Name="StationQUAD" ColumnName="StationQUAD" />
+          <ScalarProperty Name="RWWaterShed" ColumnName="RWWaterShed" />
+          <ScalarProperty Name="WQCCWaterShed" ColumnName="WQCCWaterShed" />
+          <ScalarProperty Name="HydroUnit" ColumnName="HydroUnit" />
+          <ScalarProperty Name="EcoRegion" ColumnName="EcoRegion" />
+          <ScalarProperty Name="StationName" ColumnName="StationName" />
+          <ScalarProperty Name="StationStatus" ColumnName="StationStatus" />
+          <ScalarProperty Name="Elevation" ColumnName="Elevation" />
+          <ScalarProperty Name="WaterShedRegion" ColumnName="WaterShedRegion" />
+          <ScalarProperty Name="Longtitude" ColumnName="Longtitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="County" ColumnName="County" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="NearCity" ColumnName="NearCity" />
+          <ScalarProperty Name="Move" ColumnName="Move" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UTMX" ColumnName="UTMX" />
+          <ScalarProperty Name="UTMY" ColumnName="UTMY" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="USGS" ColumnName="USGS" />
+          <ScalarProperty Name="StateEngineering" ColumnName="StateEngineering" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="StoretUploaded" ColumnName="StoretUploaded" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblParticipants">
+      <EntityTypeMapping TypeName="RiverWatchModel.tblParticipant">
+        <MappingFragment StoreEntitySet="tblParticipant">
+          <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="YearSignedOn" ColumnName="YearSignedOn" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="HomeEmail" ColumnName="HomeEmail" />
+          <ScalarProperty Name="MailPreference" ColumnName="MailPreference" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="PrimaryContact" ColumnName="PrimaryContact" />
+          <ScalarProperty Name="Training" ColumnName="Training" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPartInfoes">
+      <EntityTypeMapping TypeName="RiverWatchModel.tblPartInfo">
+        <MappingFragment StoreEntitySet="tblPartInfo">
+          <ScalarProperty Name="ptNODE" ColumnName="ptNODE" />
+          <ScalarProperty Name="ptPARENTNODE" ColumnName="ptPARENTNODE" />
+          <ScalarProperty Name="ptTEXT" ColumnName="ptTEXT" />
+          <ScalarProperty Name="ptDOCURL" ColumnName="ptDOCURL" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProjects">
+      <EntityTypeMapping TypeName="RiverWatchModel.tblProject">
+        <MappingFragment StoreEntitySet="tblProject">
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="StoretUploaded" ColumnName="StoretUploaded" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProjectStations">
+      <EntityTypeMapping TypeName="RiverWatchModel.tblProjectStation">
+        <MappingFragment StoreEntitySet="tblProjectStation">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="StationID" ColumnName="StationID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRegistrations">
+      <EntityTypeMapping TypeName="RiverWatchModel.tblRegistration">
+        <MappingFragment StoreEntitySet="tblRegistration">
+          <ScalarProperty Name="ParticipantID" ColumnName="ParticipantID" />
+          <ScalarProperty Name="RegistrationID" ColumnName="RegistrationID" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="WorkShop" ColumnName="WorkShop" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="Receipt" ColumnName="Receipt" />
+          <ScalarProperty Name="Attend" ColumnName="Attend" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSampleXXXXes">
+      <EntityTypeMapping TypeName="RiverWatchModel.tblSampleXXXX">
+        <MappingFragment StoreEntitySet="tblSampleXXXX">
+          <ScalarProperty Name="SampleID" ColumnName="SampleID" />
+          <ScalarProperty Name="StationID" ColumnName="StationID" />
+          <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+          <ScalarProperty Name="SampleNumber" ColumnName="SampleNumber" />
+          <ScalarProperty Name="NumberSample" ColumnName="NumberSample" />
+          <ScalarProperty Name="DateCollected" ColumnName="DateCollected" />
+          <ScalarProperty Name="TimeCollected" ColumnName="TimeCollected" />
+          <ScalarProperty Name="DateReceived" ColumnName="DateReceived" />
+          <ScalarProperty Name="DataSheetIncluded" ColumnName="DataSheetIncluded" />
+          <ScalarProperty Name="MissingDataSheetReqDate" ColumnName="MissingDataSheetReqDate" />
+          <ScalarProperty Name="ChainOfCustody" ColumnName="ChainOfCustody" />
+          <ScalarProperty Name="MissingDataSheetReceived" ColumnName="MissingDataSheetReceived" />
+          <ScalarProperty Name="NoMetals" ColumnName="NoMetals" />
+          <ScalarProperty Name="PhysicalHabitat" ColumnName="PhysicalHabitat" />
+          <ScalarProperty Name="Bug" ColumnName="Bug" />
+          <ScalarProperty Name="NoNutrient" ColumnName="NoNutrient" />
+          <ScalarProperty Name="TotalSuspendedSolids" ColumnName="TotalSuspendedSolids" />
+          <ScalarProperty Name="NitratePhosphorus" ColumnName="NitratePhosphorus" />
+          <ScalarProperty Name="DuplicatedTSS" ColumnName="DuplicatedTSS" />
+          <ScalarProperty Name="DuplicatedNP" ColumnName="DuplicatedNP" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="ChlorideSulfate" ColumnName="ChlorideSulfate" />
+          <ScalarProperty Name="BlankMetals" ColumnName="BlankMetals" />
+          <ScalarProperty Name="DuplicatedMetals" ColumnName="DuplicatedMetals" />
+          <ScalarProperty Name="BugsQA" ColumnName="BugsQA" />
+          <ScalarProperty Name="DuplicatedCS" ColumnName="DuplicatedCS" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTrainees">
+      <EntityTypeMapping TypeName="RiverWatchModel.tblTrainee">
+        <MappingFragment StoreEntitySet="tblTrainee">
+          <ScalarProperty Name="TraineeID" ColumnName="TraineeID" />
+          <ScalarProperty Name="RegistrationID" ColumnName="RegistrationID" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Attend" ColumnName="Attend" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUsers">
+      <EntityTypeMapping TypeName="RiverWatchModel.tblUser">
+        <MappingFragment StoreEntitySet="tblUser">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="DateLastActivity" ColumnName="DateLastActivity" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblWatercodes">
+      <EntityTypeMapping TypeName="RiverWatchModel.tblWatercode">
+        <MappingFragment StoreEntitySet="tblWatercodes">
+          <ScalarProperty Name="WATERCODE" ColumnName="WATERCODE" />
+          <ScalarProperty Name="WATERNAME" ColumnName="WATERNAME" />
+          <ScalarProperty Name="STREAM" ColumnName="STREAM" />
+          <ScalarProperty Name="ACRESMILES" ColumnName="ACRESMILES" />
+          <ScalarProperty Name="LOCATION" ColumnName="LOCATION" />
+          <ScalarProperty Name="DRAINAGE" ColumnName="DRAINAGE" />
+          <ScalarProperty Name="DRAINNAME" ColumnName="DRAINNAME" />
+          <ScalarProperty Name="HYDROCODE" ColumnName="HYDROCODE" />
+          <ScalarProperty Name="COUNTY" ColumnName="COUNTY" />
+          <ScalarProperty Name="REGION" ColumnName="REGION" />
+          <ScalarProperty Name="AWMAREA" ColumnName="AWMAREA" />
+          <ScalarProperty Name="STKCODE" ColumnName="STKCODE" />
+          <ScalarProperty Name="BIOLOGIST" ColumnName="BIOLOGIST" />
+          <ScalarProperty Name="AREABIO" ColumnName="AREABIO" />
+          <ScalarProperty Name="ADDLDATA" ColumnName="ADDLDATA" />
+          <ScalarProperty Name="MAPCOORDIN" ColumnName="MAPCOORDIN" />
+          <ScalarProperty Name="ATLASPAGE" ColumnName="ATLASPAGE" />
+          <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+          <ScalarProperty Name="ELEVATION" ColumnName="ELEVATION" />
+          <ScalarProperty Name="UT_ELEVATI" ColumnName="UT_ELEVATI" />
+          <ScalarProperty Name="OWNERSHIP" ColumnName="OWNERSHIP" />
+          <ScalarProperty Name="WILDERNESS" ColumnName="WILDERNESS" />
+          <ScalarProperty Name="BLMMAP" ColumnName="BLMMAP" />
+          <ScalarProperty Name="TOPOMAP" ColumnName="TOPOMAP" />
+          <ScalarProperty Name="OBSOLETE" ColumnName="OBSOLETE" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblWatershedGrps">
+      <EntityTypeMapping TypeName="RiverWatchModel.tblWatershedGrp">
+        <MappingFragment StoreEntitySet="tblWatershedGrp">
+          <ScalarProperty Name="tvNODE" ColumnName="tvNODE" />
+          <ScalarProperty Name="tvPARENTNODE" ColumnName="tvPARENTNODE" />
+          <ScalarProperty Name="tvTEXT" ColumnName="tvTEXT" />
+          <ScalarProperty Name="tvIMAGEURL" ColumnName="tvIMAGEURL" />
+          <ScalarProperty Name="tvDOCURL" ColumnName="tvDOCURL" />
+          <ScalarProperty Name="tvSORTORDER" ColumnName="tvSORTORDER" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblWBKeys">
+      <EntityTypeMapping TypeName="RiverWatchModel.tblWBKey">
+        <MappingFragment StoreEntitySet="tblWBKey">
+          <ScalarProperty Name="WBID" ColumnName="WBID" />
+          <ScalarProperty Name="WATERSHED" ColumnName="WATERSHED" />
+          <ScalarProperty Name="BASIN" ColumnName="BASIN" />
+          <ScalarProperty Name="SUBBASIN" ColumnName="SUBBASIN" />
+          <ScalarProperty Name="REGION" ColumnName="REGION" />
+          <ScalarProperty Name="SEGMENT" ColumnName="SEGMENT" />
+          <ScalarProperty Name="DESIG" ColumnName="DESIG" />
+          <ScalarProperty Name="SegDesc" ColumnName="SegDesc" />
+          <ScalarProperty Name="VerifyDate" ColumnName="VerifyDate" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblXSReps">
+      <EntityTypeMapping TypeName="RiverWatchModel.tblXSRep">
+        <MappingFragment StoreEntitySet="tblXSReps">
+          <ScalarProperty Name="XSID" ColumnName="XSID" />
+          <ScalarProperty Name="RepNum" ColumnName="RepNum" />
+          <ScalarProperty Name="Depth" ColumnName="Depth" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkActivityCategories">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkActivityCategory">
+        <MappingFragment StoreEntitySet="tlkActivityCategory">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkActivityTypes">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkActivityType">
+        <MappingFragment StoreEntitySet="tlkActivityType">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkBioResultsTypes">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkBioResultsType">
+        <MappingFragment StoreEntitySet="tlkBioResultsType">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkCommunities">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkCommunity">
+        <MappingFragment StoreEntitySet="tlkCommunities">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkCounties">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkCounty">
+        <MappingFragment StoreEntitySet="tlkCounty">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkEcoRegions">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkEcoRegion">
+        <MappingFragment StoreEntitySet="tlkEcoRegion">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkEquipCategories">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkEquipCategory">
+        <MappingFragment StoreEntitySet="tlkEquipCategory">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkEquipItems">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkEquipItem">
+        <MappingFragment StoreEntitySet="tlkEquipItems">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="HasSerial" ColumnName="HasSerial" />
+          <ScalarProperty Name="HasRejuv" ColumnName="HasRejuv" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkFieldGears">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkFieldGear">
+        <MappingFragment StoreEntitySet="tlkFieldGear">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="F5" ColumnName="F5" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkFieldProcedures">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkFieldProcedure">
+        <MappingFragment StoreEntitySet="tlkFieldProcedure">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkGearConfigs">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkGearConfig">
+        <MappingFragment StoreEntitySet="tlkGearConfig">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FieldGearID" ColumnName="FieldGearID" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkGrids">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkGrid">
+        <MappingFragment StoreEntitySet="tlkGrid">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkHydroUnits">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkHydroUnit">
+        <MappingFragment StoreEntitySet="tlkHydroUnit">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkLimits">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkLimit">
+        <MappingFragment StoreEntitySet="tlkLimits">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Element" ColumnName="Element" />
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="Reporting" ColumnName="Reporting" />
+          <ScalarProperty Name="MDL" ColumnName="MDL" />
+          <ScalarProperty Name="DvsTDifference" ColumnName="DvsTDifference" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkMetalBarCodeTypes">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkMetalBarCodeType">
+        <MappingFragment StoreEntitySet="tlkMetalBarCodeType">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkNutrientBarCodeTypes">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkNutrientBarCodeType">
+        <MappingFragment StoreEntitySet="tlkNutrientBarCodeType">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkNutrientLimits">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkNutrientLimit">
+        <MappingFragment StoreEntitySet="tlkNutrientLimits">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Element" ColumnName="Element" />
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="Reporting" ColumnName="Reporting" />
+          <ScalarProperty Name="MDL" ColumnName="MDL" />
+          <ScalarProperty Name="DvsTDifference" ColumnName="DvsTDifference" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkOrganizationTypes">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkOrganizationType">
+        <MappingFragment StoreEntitySet="tlkOrganizationType">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkPhysHabParas">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkPhysHabPara">
+        <MappingFragment StoreEntitySet="tlkPhysHabPara">
+          <ScalarProperty Name="LongParameterName" ColumnName="LongParameterName" />
+          <ScalarProperty Name="ParameterName" ColumnName="ParameterName" />
+          <ScalarProperty Name="ParameterTypeI" ColumnName="ParameterTypeI" />
+          <ScalarProperty Name="ParameterTypeII" ColumnName="ParameterTypeII" />
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="CharGroupID" ColumnName="CharGroupID" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="dsOrder" ColumnName="dsOrder" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkQUADIs">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkQUADI">
+        <MappingFragment StoreEntitySet="tlkQUADI">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkQuarterSections">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkQuarterSection">
+        <MappingFragment StoreEntitySet="tlkQuarterSection">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkRanges">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkRange">
+        <MappingFragment StoreEntitySet="tlkRange">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkregions">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkregion">
+        <MappingFragment StoreEntitySet="tlkregion">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkRiverWatchWaterSheds">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkRiverWatchWaterShed">
+        <MappingFragment StoreEntitySet="tlkRiverWatchWaterShed">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkSampleTypes">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkSampleType">
+        <MappingFragment StoreEntitySet="tlkSampleType">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkSections">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkSection">
+        <MappingFragment StoreEntitySet="tlkSection">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkStates">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkState">
+        <MappingFragment StoreEntitySet="tlkState">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkStationQUADs">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkStationQUAD">
+        <MappingFragment StoreEntitySet="tlkStationQUAD">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkStationStatus">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkStationStatu">
+        <MappingFragment StoreEntitySet="tlkStationStatus">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="ActiveFlag" ColumnName="ActiveFlag" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkStationTypes">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkStationType">
+        <MappingFragment StoreEntitySet="tlkStationType">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkTownships">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkTownship">
+        <MappingFragment StoreEntitySet="tlkTownship">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkWQCCWaterSheds">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkWQCCWaterShed">
+        <MappingFragment StoreEntitySet="tlkWQCCWaterShed">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkWSGs">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkWSG">
+        <MappingFragment StoreEntitySet="tlkWSG">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tlkWSRs">
+      <EntityTypeMapping TypeName="RiverWatchModel.tlkWSR">
+        <MappingFragment StoreEntitySet="tlkWSR">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trsChemParaMapColumns">
+      <EntityTypeMapping TypeName="RiverWatchModel.trsChemParaMapColumn">
+        <MappingFragment StoreEntitySet="trsChemParaMapColumns">
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="ColName" ColumnName="ColName" />
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="ChemParameter" ColumnName="ChemParameter" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UnknownSamples">
+      <EntityTypeMapping TypeName="RiverWatchModel.UnknownSample">
+        <MappingFragment StoreEntitySet="UnknownSample">
+          <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+          <ScalarProperty Name="UnknownSampleID" ColumnName="UnknownSampleID" />
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="SampleNumber" ColumnName="SampleNumber" />
+          <ScalarProperty Name="DateSent" ColumnName="DateSent" />
+          <ScalarProperty Name="Value1" ColumnName="Value1" />
+          <ScalarProperty Name="Value2" ColumnName="Value2" />
+          <ScalarProperty Name="MeanValue" ColumnName="MeanValue" />
+          <ScalarProperty Name="TrueValue" ColumnName="TrueValue" />
+          <ScalarProperty Name="Round" ColumnName="Round" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="OldValidated" ColumnName="OldValidated" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="BatchSampleNumber" ColumnName="BatchSampleNumber" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+          <ScalarProperty Name="Validated" ColumnName="Validated" />
+          <ScalarProperty Name="PctRecovery" ColumnName="PctRecovery" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="organizations">
+      <EntityTypeMapping TypeName="RiverWatchModel.organization">
+        <MappingFragment StoreEntitySet="organization">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KitNumber" ColumnName="KitNumber" />
+          <ScalarProperty Name="OrganizationName" ColumnName="OrganizationName" />
+          <ScalarProperty Name="OrganizationType" ColumnName="OrganizationType" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MailingAddress" ColumnName="MailingAddress" />
+          <ScalarProperty Name="ShippingAddress" ColumnName="ShippingAddress" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="YearStarted" ColumnName="YearStarted" />
+          <ScalarProperty Name="WaterShed" ColumnName="WaterShed" />
+          <ScalarProperty Name="WaterShedGathering" ColumnName="WaterShedGathering" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateLastModified" ColumnName="DateLastModified" />
+          <ScalarProperty Name="UserLastModified" ColumnName="UserLastModified" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblXS">
+      <EntityTypeMapping TypeName="RiverWatchModel.tblX">
+        <MappingFragment StoreEntitySet="tblXS">
+          <ScalarProperty Name="XSID" ColumnName="XSID" />
+          <ScalarProperty Name="SampleID" ColumnName="SampleID" />
+          <ScalarProperty Name="DistanceFromWQS" ColumnName="DistanceFromWQS" />
+          <ScalarProperty Name="DistUnit" ColumnName="DistUnit" />
+          <ScalarProperty Name="EnterDate" ColumnName="EnterDate" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

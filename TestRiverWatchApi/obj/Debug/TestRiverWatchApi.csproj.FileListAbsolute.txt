@@ -1,0 +1,18 @@
+c:\users\amiscall\documents\visual studio 2015\Projects\TestRiverWatchApi\TestRiverWatchApi\bin\Debug\TestRiverWatchApi.exe.config
+c:\users\amiscall\documents\visual studio 2015\Projects\TestRiverWatchApi\TestRiverWatchApi\bin\Debug\TestRiverWatchApi.exe
+c:\users\amiscall\documents\visual studio 2015\Projects\TestRiverWatchApi\TestRiverWatchApi\bin\Debug\TestRiverWatchApi.pdb
+c:\users\amiscall\documents\visual studio 2015\Projects\TestRiverWatchApi\TestRiverWatchApi\bin\Debug\Newtonsoft.Json.dll
+c:\users\amiscall\documents\visual studio 2015\Projects\TestRiverWatchApi\TestRiverWatchApi\bin\Debug\System.Net.Http.Formatting.dll
+c:\users\amiscall\documents\visual studio 2015\Projects\TestRiverWatchApi\TestRiverWatchApi\bin\Debug\Newtonsoft.Json.xml
+c:\users\amiscall\documents\visual studio 2015\Projects\TestRiverWatchApi\TestRiverWatchApi\bin\Debug\System.Net.Http.Formatting.xml
+c:\users\amiscall\documents\visual studio 2015\Projects\TestRiverWatchApi\TestRiverWatchApi\obj\Debug\TestRiverWatchApi.csprojResolveAssemblyReference.cache
+c:\users\amiscall\documents\visual studio 2015\Projects\TestRiverWatchApi\TestRiverWatchApi\obj\Debug\TestRiverWatchApi.exe
+c:\users\amiscall\documents\visual studio 2015\Projects\TestRiverWatchApi\TestRiverWatchApi\obj\Debug\TestRiverWatchApi.pdb
+c:\users\amiscall\documents\visual studio 2015\Projects\TestRiverWatchApi\TestRiverWatchApi\bin\Debug\EntityFramework.dll
+c:\users\amiscall\documents\visual studio 2015\Projects\TestRiverWatchApi\TestRiverWatchApi\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\amiscall\documents\visual studio 2015\Projects\TestRiverWatchApi\TestRiverWatchApi\bin\Debug\EntityFramework.xml
+c:\users\amiscall\documents\visual studio 2015\Projects\TestRiverWatchApi\TestRiverWatchApi\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\amiscall\documents\visual studio 2015\Projects\TestRiverWatchApi\TestRiverWatchApi\bin\Debug\System.Web.dll
+C:\Users\amiscall\Source\Repos\WebAPIWindowsFormTest\TestRiverWatchApi\bin\Debug\TestRiverWatchApi.exe.config
+C:\Users\amiscall\Source\Repos\WebAPIWindowsFormTest\TestRiverWatchApi\obj\Debug\TestRiverWatchApi.exe
+C:\Users\amiscall\Source\Repos\WebAPIWindowsFormTest\TestRiverWatchApi\obj\Debug\TestRiverWatchApi.pdb

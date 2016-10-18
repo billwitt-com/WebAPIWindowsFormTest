@@ -1,0 +1,1368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RiverWatchModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ControlPermissions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="PageName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ControlID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RoleValue" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateCreated" Type="date" Nullable="false" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="250" />
+    <Property Name="Valid" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ErrorLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Message" Type="nvarchar" MaxLength="200" />
+    <Property Name="FromPage" Type="nvarchar" MaxLength="200" />
+    <Property Name="StackTrace" Type="nvarchar(max)" />
+    <Property Name="Severity" Type="int" />
+    <Property Name="LoggedInUser" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="FileStorage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="4000" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="DateCreated" Type="date" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" Nullable="false" />
+    <Property Name="Content" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="GearConfig">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="FieldGearID" Type="varchar" MaxLength="10" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Valid" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InboundICPFinal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="nvarchar" MaxLength="30" />
+    <Property Name="tblSampleID" Type="int" />
+    <Property Name="DUPLICATE" Type="nvarchar" MaxLength="2" />
+    <Property Name="AL_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="AL_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="AS_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="AS_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="CA_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="CA_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="CD_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="CD_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="CU_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="CU_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="FE_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="FE_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="PB_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="PB_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="MG_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="MG_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="MN_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="MN_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="SE_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="SE_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="ZN_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="ZN_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="NA_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="NA_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="K_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="K_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="ANADATE" Type="datetime" />
+    <Property Name="COMPLETE" Type="bit" />
+    <Property Name="DATE_SENT" Type="datetime" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="Valid" Type="bit" Nullable="false" />
+    <Property Name="Edited" Type="bit" Nullable="false" />
+    <Property Name="Saved" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InboundICPOrigional">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="nvarchar" MaxLength="30" />
+    <Property Name="tblSampleID" Type="int" />
+    <Property Name="DUPLICATE" Type="nvarchar" MaxLength="2" />
+    <Property Name="AL_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="AL_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="AS_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="AS_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="CA_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="CA_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="CD_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="CD_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="CU_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="CU_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="FE_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="FE_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="PB_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="PB_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="MG_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="MG_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="MN_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="MN_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="SE_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="SE_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="ZN_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="ZN_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="NA_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="NA_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="K_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="K_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="ANADATE" Type="datetime" />
+    <Property Name="COMPLETE" Type="bit" />
+    <Property Name="DATE_SENT" Type="datetime" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="Valid" Type="bit" Nullable="false" />
+    <Property Name="Edited" Type="bit" Nullable="false" />
+    <Property Name="Saved" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InboundSamples">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StationNum" Type="int" />
+    <Property Name="SampleID" Type="nvarchar" MaxLength="50" />
+    <Property Name="txtSampleID" Type="char" MaxLength="4" />
+    <Property Name="KitNum" Type="int" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Time" Type="int" />
+    <Property Name="USGSFlow" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="PH" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="TempC" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="PhenAlk" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="TotalAlk" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="TotalHard" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="DO" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="DOsat" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="Tag" Type="varchar" MaxLength="3" />
+    <Property Name="Chk" Type="varchar" MaxLength="4" />
+    <Property Name="EntryType" Type="int" />
+    <Property Name="EntryStaff" Type="varchar" MaxLength="30" />
+    <Property Name="MetalsNormal" Type="bit" />
+    <Property Name="MetalsBlnk" Type="bit" />
+    <Property Name="MetalsDupe" Type="bit" />
+    <Property Name="Bugs" Type="bit" />
+    <Property Name="BugsQA" Type="bit" />
+    <Property Name="TSS" Type="bit" />
+    <Property Name="CS" Type="bit" />
+    <Property Name="NP" Type="bit" />
+    <Property Name="TSSDupe" Type="bit" />
+    <Property Name="CSDupe" Type="bit" />
+    <Property Name="NPDupe" Type="bit" />
+    <Property Name="FieldValid" Type="bit" />
+    <Property Name="MetalsStat" Type="int" />
+    <Property Name="FinalCheck" Type="bit" />
+    <Property Name="Method" Type="int" />
+    <Property Name="Comments" Type="varchar" MaxLength="500" />
+    <Property Name="DateReceived" Type="datetime" />
+    <Property Name="DataSheetIncluded" Type="bit" />
+    <Property Name="MissingDataSheetReqDate" Type="datetime" />
+    <Property Name="ChainOfCustody" Type="bit" />
+    <Property Name="MissingDataSheetReceived" Type="bit" />
+    <Property Name="PassValStep" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="tblSampleID" Type="int" />
+    <Property Name="Valid" Type="bit" />
+  </EntityType>
+  <EntityType Name="Lachat">
+    <Key>
+      <PropertyRef Name="inbLachatID" />
+    </Key>
+    <Property Name="inbLachatID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Batch" Type="varchar" MaxLength="30" />
+    <Property Name="SampleType" Type="varchar" MaxLength="30" />
+    <Property Name="SampleDescription" Type="varchar" MaxLength="30" />
+    <Property Name="CODE" Type="varchar" MaxLength="50" />
+    <Property Name="Parameter" Type="varchar" MaxLength="30" />
+    <Property Name="Result" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="Unit" Type="varchar" MaxLength="30" />
+    <Property Name="AnalDate" Type="datetime" />
+    <Property Name="CONHI" Type="bit" />
+    <Property Name="RPDDivPctREC" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="CHANGED" Type="bit" />
+    <Property Name="NumChanged" Type="int" />
+    <Property Name="Comment" Type="varchar" MaxLength="50" />
+    <Property Name="PassValStep" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="tblSampleID" Type="int" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="Validated" Type="bit" />
+    <Property Name="BlkDup" Type="bit" />
+    <Property Name="Failed" Type="bit" />
+  </EntityType>
+  <EntityType Name="MetalBarCode">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SampleNumber" Type="varchar" MaxLength="30" />
+    <Property Name="NumberSample" Type="varchar" MaxLength="10" />
+    <Property Name="LabID" Type="varchar" MaxLength="10" />
+    <Property Name="Code" Type="varchar" MaxLength="2" />
+    <Property Name="Type" Type="varchar" MaxLength="10" />
+    <Property Name="Filtered" Type="bit" Nullable="false" />
+    <Property Name="ContainMetal" Type="bit" Nullable="false" />
+    <Property Name="BoxNumber" Type="varchar" MaxLength="5" />
+    <Property Name="Verified" Type="bit" Nullable="false" />
+    <Property Name="LogDate" Type="datetime" />
+    <Property Name="AnalyzeDate" Type="datetime" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="varchar" MaxLength="25" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="25" />
+    <Property Name="SampleID" Type="int" />
+  </EntityType>
+  <EntityType Name="NEWexpWater">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tblSampleID" Type="int" />
+    <Property Name="SampleNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Event" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="WaterShed" Type="varchar" MaxLength="3" />
+    <Property Name="River_CD" Type="float" />
+    <Property Name="RiverName" Type="varchar" MaxLength="17" />
+    <Property Name="KitNumber" Type="int" />
+    <Property Name="OrganizationName" Type="varchar" MaxLength="50" />
+    <Property Name="OrganizationID" Type="int" />
+    <Property Name="StationNumber" Type="smallint" />
+    <Property Name="TypeCode" Type="varchar" MaxLength="5" />
+    <Property Name="StationName" Type="varchar" MaxLength="50" />
+    <Property Name="MetalsBarCode" Type="varchar" MaxLength="20" />
+    <Property Name="NutrientBarCode" Type="varchar" MaxLength="20" />
+    <Property Name="FieldBarCode" Type="varchar" MaxLength="20" />
+    <Property Name="BugsBarCode" Type="varchar" MaxLength="20" />
+    <Property Name="SampleDate" Type="datetime" Nullable="false" />
+    <Property Name="USGS_Flow" Type="float" />
+    <Property Name="PH" Type="float" />
+    <Property Name="TempC" Type="float" />
+    <Property Name="PHEN_ALK" Type="float" />
+    <Property Name="TOTAL_ALK" Type="float" />
+    <Property Name="TOTAL_HARD" Type="float" />
+    <Property Name="DO_MGL" Type="float" />
+    <Property Name="DOSAT" Type="smallint" />
+    <Property Name="AL_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="AL_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="AS_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="AS_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="CA_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="CA_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="CD_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="CD_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="CU_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="CU_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="FE_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="FE_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="MG_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="MG_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="MN_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="MN_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="PB_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="PB_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="SE_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="SE_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="ZN_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="ZN_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="NA_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="NA_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="K_D" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="K_T" Type="decimal" Precision="28" Scale="10" />
+    <Property Name="Rep" Type="int" />
+    <Property Name="Ammonia" Type="float" />
+    <Property Name="Chloride" Type="float" />
+    <Property Name="ChlorophyllA" Type="float" />
+    <Property Name="DOC" Type="float" />
+    <Property Name="NN" Type="float" />
+    <Property Name="OP" Type="float" />
+    <Property Name="Sulfate" Type="float" />
+    <Property Name="totN" Type="float" />
+    <Property Name="totP" Type="float" />
+    <Property Name="TKN" Type="float" />
+    <Property Name="orgN" Type="float" />
+    <Property Name="TSS" Type="float" />
+    <Property Name="Batch" Type="int" />
+    <Property Name="SampleComments" Type="nvarchar(max)" />
+    <Property Name="FieldComment" Type="nvarchar(max)" />
+    <Property Name="NutrientComment" Type="nvarchar(max)" />
+    <Property Name="MetalsComment" Type="nvarchar(max)" />
+    <Property Name="BugsComments" Type="nvarchar(max)" />
+    <Property Name="BenthicsComments" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="BadBlank" Type="bit" />
+    <Property Name="BadDuplicate" Type="bit" />
+    <Property Name="BadSample" Type="bit" />
+    <Property Name="Valid" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NutrientBarCode">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SampleID" Type="int" />
+    <Property Name="SampleNumber" Type="varchar" MaxLength="300" />
+    <Property Name="LabID" Type="nvarchar" MaxLength="300" />
+    <Property Name="Batch" Type="varchar" MaxLength="300" />
+    <Property Name="Done" Type="bit" />
+    <Property Name="LogDate" Type="datetime" />
+    <Property Name="AnalyzeDate" Type="datetime" />
+    <Property Name="Comment" Type="varchar(max)" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="varchar" MaxLength="60" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="60" />
+    <Property Name="TotalPhos" Type="bit" />
+    <Property Name="OrthoPhos" Type="bit" />
+    <Property Name="TotalNitro" Type="bit" />
+    <Property Name="NitrateNitrite" Type="bit" />
+    <Property Name="Ammonia" Type="bit" />
+    <Property Name="DOC" Type="bit" />
+    <Property Name="Chloride" Type="bit" />
+    <Property Name="Sulfate" Type="bit" />
+    <Property Name="TSS" Type="bit" />
+    <Property Name="ChlorA" Type="bit" />
+  </EntityType>
+  <EntityType Name="NutrientData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BARCODE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Batch" Type="varchar" MaxLength="30" />
+    <Property Name="TypeCode" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="SampleNumber" Type="varchar" MaxLength="50" />
+    <Property Name="TotalPhos" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="TotalPhos_CH" Type="bit" />
+    <Property Name="OrthoPhos" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="OrthoPhos_CH" Type="bit" />
+    <Property Name="TotalNitro" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="TotalNitro_CH" Type="bit" />
+    <Property Name="NitrateNitrite" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="NitrateNitrite_CH" Type="bit" />
+    <Property Name="Ammonia" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="Ammonia_CH" Type="bit" />
+    <Property Name="DOC" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="DOC_CH" Type="bit" />
+    <Property Name="Chloride" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="Chloride_CH" Type="bit" />
+    <Property Name="Sulfate" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="Sulfate_CH" Type="bit" />
+    <Property Name="TSS" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="TSS_CH" Type="bit" />
+    <Property Name="ChlorA" Type="numeric" Precision="12" Scale="6" />
+    <Property Name="ChlorA_CH" Type="bit" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="Validated" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NutrientLimits">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Element" Type="nvarchar" MaxLength="40" />
+    <Property Name="RowID" Type="nvarchar" MaxLength="40" />
+    <Property Name="Reporting" Type="decimal" Precision="16" Scale="4" />
+    <Property Name="MDL" Type="decimal" Precision="16" Scale="4" />
+    <Property Name="DvsTDifference" Type="decimal" Precision="16" Scale="4" />
+    <Property Name="HighLimit" Type="decimal" Precision="16" Scale="4" />
+    <Property Name="DateCreated" Type="date" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="200" />
+    <Property Name="Valid" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RiverWatch.dbo.organization' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="organization">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="OrganizationName" />
+      <PropertyRef Name="OrganizationType" />
+      <PropertyRef Name="Active" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KitNumber" Type="int" />
+    <Property Name="OrganizationName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OrganizationType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="MailingAddress" Type="varchar" MaxLength="100" />
+    <Property Name="ShippingAddress" Type="varchar" MaxLength="100" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="2" />
+    <Property Name="Zip" Type="varchar" MaxLength="10" />
+    <Property Name="Phone" Type="varchar" MaxLength="30" />
+    <Property Name="Fax" Type="varchar" MaxLength="20" />
+    <Property Name="YearStarted" Type="varchar" MaxLength="4" />
+    <Property Name="WaterShed" Type="varchar" MaxLength="2" />
+    <Property Name="WaterShedGathering" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="25" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="varchar" MaxLength="25" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="25" />
+    <Property Name="Valid" Type="bit" />
+  </EntityType>
+  <EntityType Name="OrgStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrganizationID" Type="int" Nullable="false" />
+    <Property Name="ContractStartDate" Type="datetime" />
+    <Property Name="ContractEndDate" Type="datetime" />
+    <Property Name="ContractSigned" Type="bit" />
+    <Property Name="ContractSignedDate" Type="datetime" />
+    <Property Name="SiteVisited" Type="bit" />
+    <Property Name="VolunteerTimeSheet1" Type="bit" />
+    <Property Name="VolunteerTimeShee2" Type="bit" />
+    <Property Name="VolunteerTimeSheet3" Type="bit" />
+    <Property Name="VolunteerTimeSheet4" Type="bit" />
+    <Property Name="DataEnteredElectronically1" Type="bit" />
+    <Property Name="DataEnteredElectronically2" Type="bit" />
+    <Property Name="DataEnteredElectronically3" Type="bit" />
+    <Property Name="DataEnteredElectronically4" Type="bit" />
+    <Property Name="SampleShipped1" Type="bit" />
+    <Property Name="SampleShipped2" Type="bit" />
+    <Property Name="SampleShipped3" Type="bit" />
+    <Property Name="SampleShipped4" Type="bit" />
+    <Property Name="NumberOfSamplesJan" Type="int" />
+    <Property Name="NumberOfSamplesFeb" Type="int" />
+    <Property Name="NumberOfSamplesMar" Type="int" />
+    <Property Name="NumberOfSamplesApr" Type="int" />
+    <Property Name="NumberOfSamplesMay" Type="int" />
+    <Property Name="NumberOfSamplesJun" Type="int" />
+    <Property Name="NumberOfSamplesJul" Type="int" />
+    <Property Name="NumberOfSamplesAug" Type="int" />
+    <Property Name="NumberOfSamplesSep" Type="int" />
+    <Property Name="NumberOfSamplesOct" Type="int" />
+    <Property Name="NumberOfSamplesNov" Type="int" />
+    <Property Name="NumberOfSamplesDec" Type="int" />
+    <Property Name="Nutrient1Collected" Type="bit" />
+    <Property Name="Nutrient2Collected" Type="bit" />
+    <Property Name="BugCollected" Type="bit" />
+    <Property Name="UnknownSpringRecordedDate" Type="datetime" />
+    <Property Name="UnknownFallRecordedDate" Type="datetime" />
+    <Property Name="NumberOfSamplesBlank" Type="int" />
+    <Property Name="NumberOfSamplesDuplicate" Type="int" />
+    <Property Name="TroubleComment" Type="nvarchar" MaxLength="1000" />
+    <Property Name="NoteComment" Type="nvarchar" MaxLength="1000" />
+    <Property Name="HardshipComment" Type="nvarchar" MaxLength="1000" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="nvarchar" MaxLength="25" />
+    <Property Name="NumberOfMetalsBlank" Type="int" />
+    <Property Name="NumberOfMetalsDuplicate" Type="int" />
+  </EntityType>
+  <EntityType Name="project">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProjectDescription" Type="varchar" MaxLength="250" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="varchar" MaxLength="25" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="25" />
+    <Property Name="StoretUploaded" Type="varchar" MaxLength="25" />
+    <Property Name="Valid" Type="bit" />
+  </EntityType>
+  <EntityType Name="ProjectStation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectID" Type="int" />
+    <Property Name="StationNumber" Type="int" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Level" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="250" />
+    <Property Name="DateCreated" Type="date" />
+    <Property Name="Valid" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Samples">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SampleID" Type="int" Nullable="false" />
+    <Property Name="StationID" Type="int" Nullable="false" />
+    <Property Name="OrganizationID" Type="int" />
+    <Property Name="SampleNumber" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="NumberSample" Type="varchar" MaxLength="10" />
+    <Property Name="DateCollected" Type="datetime" Nullable="false" />
+    <Property Name="TimeCollected" Type="datetime" />
+    <Property Name="DateReceived" Type="datetime" />
+    <Property Name="DataSheetIncluded" Type="bit" Nullable="false" />
+    <Property Name="MissingDataSheetReqDate" Type="datetime" />
+    <Property Name="ChainOfCustody" Type="bit" Nullable="false" />
+    <Property Name="MissingDataSheetReceived" Type="bit" Nullable="false" />
+    <Property Name="NoMetals" Type="bit" Nullable="false" />
+    <Property Name="PhysicalHabitat" Type="bit" Nullable="false" />
+    <Property Name="Bug" Type="bit" Nullable="false" />
+    <Property Name="NoNutrient" Type="bit" Nullable="false" />
+    <Property Name="TotalSuspendedSolids" Type="bit" Nullable="false" />
+    <Property Name="NitratePhosphorus" Type="bit" Nullable="false" />
+    <Property Name="DuplicatedTSS" Type="bit" Nullable="false" />
+    <Property Name="DuplicatedNP" Type="bit" Nullable="false" />
+    <Property Name="Comment" Type="varchar" MaxLength="1000" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="varchar" MaxLength="25" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="25" />
+    <Property Name="ChlorideSulfate" Type="bit" />
+    <Property Name="BlankMetals" Type="bit" />
+    <Property Name="DuplicatedMetals" Type="bit" />
+    <Property Name="BugsQA" Type="bit" />
+    <Property Name="DuplicatedCS" Type="bit" />
+    <Property Name="Valid" Type="bit" />
+  </EntityType>
+  <EntityType Name="Station">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StationNumber" Type="int" />
+    <Property Name="River" Type="varchar" MaxLength="17" />
+    <Property Name="AquaticModelIndex" Type="varchar" MaxLength="25" />
+    <Property Name="WaterCode" Type="varchar" MaxLength="5" />
+    <Property Name="WaterBodyID" Type="varchar" MaxLength="25" />
+    <Property Name="StationType" Type="varchar" MaxLength="25" />
+    <Property Name="QUADI" Type="varchar" MaxLength="25" />
+    <Property Name="Township" Type="varchar" MaxLength="25" />
+    <Property Name="Range" Type="varchar" MaxLength="25" />
+    <Property Name="Section" Type="int" />
+    <Property Name="QuaterSection" Type="varchar" MaxLength="25" />
+    <Property Name="Grid" Type="varchar" MaxLength="25" />
+    <Property Name="StationQUAD" Type="varchar" MaxLength="25" />
+    <Property Name="RWWaterShed" Type="varchar" MaxLength="2" />
+    <Property Name="WQCCWaterShed" Type="varchar" MaxLength="25" />
+    <Property Name="HydroUnit" Type="varchar" MaxLength="25" />
+    <Property Name="EcoRegion" Type="varchar" MaxLength="50" />
+    <Property Name="StationName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StationStatus" Type="varchar" MaxLength="10" />
+    <Property Name="Elevation" Type="float" />
+    <Property Name="WaterShedRegion" Type="varchar" MaxLength="25" />
+    <Property Name="Longtitude" Type="float" />
+    <Property Name="Latitude" Type="float" />
+    <Property Name="County" Type="varchar" MaxLength="25" />
+    <Property Name="State" Type="varchar" MaxLength="2" />
+    <Property Name="NearCity" Type="varchar" MaxLength="50" />
+    <Property Name="Move" Type="varchar" MaxLength="25" />
+    <Property Name="Description" Type="varchar" MaxLength="1024" />
+    <Property Name="UTMX" Type="float" />
+    <Property Name="UTMY" Type="float" />
+    <Property Name="Region" Type="varchar" MaxLength="25" />
+    <Property Name="Comments" Type="varchar" MaxLength="1000" />
+    <Property Name="USGS" Type="bit" />
+    <Property Name="StateEngineering" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="varchar" MaxLength="25" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="25" />
+    <Property Name="StoretUploaded" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblParticipant">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="OrganizationID" Type="int" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="25" />
+    <Property Name="FirstName" Type="varchar" MaxLength="25" />
+    <Property Name="Title" Type="varchar" MaxLength="25" />
+    <Property Name="YearSignedOn" Type="int" />
+    <Property Name="Phone" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Address1" Type="varchar" MaxLength="50" />
+    <Property Name="Address2" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="25" />
+    <Property Name="State" Type="varchar" MaxLength="2" />
+    <Property Name="Zip" Type="varchar" MaxLength="10" />
+    <Property Name="HomePhone" Type="varchar" MaxLength="30" />
+    <Property Name="HomeEmail" Type="varchar" MaxLength="50" />
+    <Property Name="MailPreference" Type="varchar" MaxLength="50" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="PrimaryContact" Type="bit" Nullable="false" />
+    <Property Name="Training" Type="bit" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="varchar" MaxLength="25" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="25" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPartInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ptNODE" Type="int" Nullable="false" />
+    <Property Name="ptPARENTNODE" Type="int" />
+    <Property Name="ptTEXT" Type="nchar" MaxLength="50" />
+    <Property Name="ptDOCURL" Type="nchar" MaxLength="150" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblProject">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ProjectName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProjectDescription" Type="varchar" MaxLength="250" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="varchar" MaxLength="25" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="25" />
+    <Property Name="StoretUploaded" Type="varchar" MaxLength="25" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblProjectStation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectID" Type="int" Nullable="false" />
+    <Property Name="StationID" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="varchar" MaxLength="25" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="tblRegistration">
+    <Key>
+      <PropertyRef Name="RegistrationID" />
+    </Key>
+    <Property Name="ParticipantID" Type="int" Nullable="false" />
+    <Property Name="RegistrationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RegistrationDate" Type="datetime" />
+    <Property Name="WorkShop" Type="varchar" MaxLength="50" />
+    <Property Name="Paid" Type="bit" Nullable="false" />
+    <Property Name="Receipt" Type="bit" Nullable="false" />
+    <Property Name="Attend" Type="bit" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="varchar" MaxLength="25" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="tblSampleXXXX">
+    <Key>
+      <PropertyRef Name="SampleID" />
+    </Key>
+    <Property Name="SampleID" Type="int" Nullable="false" />
+    <Property Name="StationID" Type="int" Nullable="false" />
+    <Property Name="OrganizationID" Type="int" />
+    <Property Name="SampleNumber" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="NumberSample" Type="varchar" MaxLength="10" />
+    <Property Name="DateCollected" Type="datetime" Nullable="false" />
+    <Property Name="TimeCollected" Type="datetime" />
+    <Property Name="DateReceived" Type="datetime" />
+    <Property Name="DataSheetIncluded" Type="bit" Nullable="false" />
+    <Property Name="MissingDataSheetReqDate" Type="datetime" />
+    <Property Name="ChainOfCustody" Type="bit" Nullable="false" />
+    <Property Name="MissingDataSheetReceived" Type="bit" Nullable="false" />
+    <Property Name="NoMetals" Type="bit" Nullable="false" />
+    <Property Name="PhysicalHabitat" Type="bit" Nullable="false" />
+    <Property Name="Bug" Type="bit" Nullable="false" />
+    <Property Name="NoNutrient" Type="bit" Nullable="false" />
+    <Property Name="TotalSuspendedSolids" Type="bit" Nullable="false" />
+    <Property Name="NitratePhosphorus" Type="bit" Nullable="false" />
+    <Property Name="DuplicatedTSS" Type="bit" Nullable="false" />
+    <Property Name="DuplicatedNP" Type="bit" Nullable="false" />
+    <Property Name="Comment" Type="varchar" MaxLength="1000" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="varchar" MaxLength="25" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="25" />
+    <Property Name="ChlorideSulfate" Type="bit" />
+    <Property Name="BlankMetals" Type="bit" />
+    <Property Name="DuplicatedMetals" Type="bit" />
+    <Property Name="BugsQA" Type="bit" />
+    <Property Name="DuplicatedCS" Type="bit" />
+    <Property Name="Valid" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblTrainee">
+    <Key>
+      <PropertyRef Name="TraineeID" />
+    </Key>
+    <Property Name="TraineeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RegistrationID" Type="int" Nullable="false" />
+    <Property Name="Age" Type="int" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sex" Type="char" MaxLength="1" />
+    <Property Name="Attend" Type="bit" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="varchar" MaxLength="25" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="25" />
+    <Property Name="Valid" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="UserName" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="FirstName" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Role" Type="int" />
+    <Property Name="DateLastActivity" Type="datetime" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblWatercodes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="WATERCODE" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="WATERNAME" Type="varchar" MaxLength="30" />
+    <Property Name="STREAM" Type="bit" />
+    <Property Name="ACRESMILES" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="LOCATION" Type="varchar" MaxLength="31" />
+    <Property Name="DRAINAGE" Type="varchar" MaxLength="2" />
+    <Property Name="DRAINNAME" Type="varchar" MaxLength="25" />
+    <Property Name="HYDROCODE" Type="varchar" MaxLength="10" />
+    <Property Name="COUNTY" Type="varchar" MaxLength="3" />
+    <Property Name="REGION" Type="varchar" MaxLength="2" />
+    <Property Name="AWMAREA" Type="varchar" MaxLength="2" />
+    <Property Name="STKCODE" Type="varchar" MaxLength="4" />
+    <Property Name="BIOLOGIST" Type="varchar" MaxLength="8" />
+    <Property Name="AREABIO" Type="varchar" MaxLength="8" />
+    <Property Name="ADDLDATA" Type="varchar" MaxLength="16" />
+    <Property Name="MAPCOORDIN" Type="varchar" MaxLength="2" />
+    <Property Name="ATLASPAGE" Type="varchar" MaxLength="3" />
+    <Property Name="CATEGORY" Type="varchar" MaxLength="3" />
+    <Property Name="ELEVATION" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="UT_ELEVATI" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="OWNERSHIP" Type="varchar" MaxLength="6" />
+    <Property Name="WILDERNESS" Type="bit" />
+    <Property Name="BLMMAP" Type="varchar" MaxLength="2" />
+    <Property Name="TOPOMAP" Type="varchar" MaxLength="4" />
+    <Property Name="OBSOLETE" Type="bit" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblWatershedGrp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="tvNODE" Type="int" Nullable="false" />
+    <Property Name="tvPARENTNODE" Type="int" />
+    <Property Name="tvTEXT" Type="ntext" />
+    <Property Name="tvIMAGEURL" Type="nchar" MaxLength="50" />
+    <Property Name="tvDOCURL" Type="nchar" MaxLength="50" />
+    <Property Name="tvSORTORDER" Type="int" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblWBKey">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="WBID" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="WATERSHED" Type="varchar" MaxLength="2" />
+    <Property Name="BASIN" Type="varchar" MaxLength="15" />
+    <Property Name="SUBBASIN" Type="varchar" MaxLength="20" />
+    <Property Name="REGION" Type="varchar" MaxLength="6" />
+    <Property Name="SEGMENT" Type="varchar" MaxLength="4" />
+    <Property Name="DESIG" Type="varchar" MaxLength="2" />
+    <Property Name="SegDesc" Type="varchar" MaxLength="1024" />
+    <Property Name="VerifyDate" Type="datetime" />
+    <Property Name="Comment" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RiverWatch.dbo.tblXS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblXS">
+    <Key>
+      <PropertyRef Name="XSID" />
+    </Key>
+    <Property Name="XSID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SampleID" Type="int" />
+    <Property Name="DistanceFromWQS" Type="int" />
+    <Property Name="DistUnit" Type="varchar" MaxLength="50" />
+    <Property Name="EnterDate" Type="varchar" MaxLength="50" />
+    <Property Name="Comments" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblXSReps">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="XSID" Type="int" Nullable="false" />
+    <Property Name="RepNum" Type="int" Nullable="false" />
+    <Property Name="Depth" Type="decimal" Precision="9" Scale="2" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkActivityCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="30" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkActivityType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkBioResultsType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+    <Property Name="DateLastModified" Type="smalldatetime" />
+    <Property Name="UserLastModified" Type="nvarchar" MaxLength="255" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkCommunities">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+    <Property Name="DateLastModified" Type="smalldatetime" />
+    <Property Name="UserLastModified" Type="nvarchar" MaxLength="255" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkCounty">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkEcoRegion">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkEquipCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkEquipItems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="HasSerial" Type="bit" Nullable="false" />
+    <Property Name="HasRejuv" Type="bit" Nullable="false" />
+    <Property Name="Category" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkFieldGear">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="F5" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkFieldProcedure">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkGearConfig">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="FieldGearID" Type="varchar" MaxLength="10" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkGrid">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkHydroUnit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkLimits">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Element" Type="nvarchar" MaxLength="40" />
+    <Property Name="RowID" Type="nvarchar" MaxLength="40" />
+    <Property Name="Reporting" Type="decimal" Precision="16" Scale="4" />
+    <Property Name="MDL" Type="decimal" Precision="16" Scale="4" />
+    <Property Name="DvsTDifference" Type="decimal" Precision="16" Scale="4" />
+    <Property Name="DateCreated" Type="date" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="200" />
+    <Property Name="Valid" Type="bit" />
+  </EntityType>
+  <EntityType Name="tlkMetalBarCodeType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkNutrientBarCodeType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkNutrientLimits">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Element" Type="nvarchar" MaxLength="40" />
+    <Property Name="RowID" Type="nvarchar" MaxLength="40" />
+    <Property Name="Reporting" Type="decimal" Precision="16" Scale="4" />
+    <Property Name="MDL" Type="decimal" Precision="16" Scale="4" />
+    <Property Name="DvsTDifference" Type="decimal" Precision="16" Scale="4" />
+    <Property Name="DateCreated" Type="date" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="200" />
+    <Property Name="Valid" Type="bit" />
+  </EntityType>
+  <EntityType Name="tlkOrganizationType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkPhysHabPara">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="LongParameterName" Type="nvarchar" MaxLength="255" />
+    <Property Name="ParameterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ParameterTypeI" Type="nvarchar" MaxLength="50" />
+    <Property Name="ParameterTypeII" Type="nvarchar" MaxLength="50" />
+    <Property Name="RowID" Type="nvarchar" MaxLength="15" />
+    <Property Name="CharGroupID" Type="nvarchar" MaxLength="8" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="255" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="dsOrder" Type="int" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkQUADI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkQuarterSection">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkRange">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkregion">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkRiverWatchWaterShed">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkSampleType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkSection">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="char" MaxLength="10" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkState">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkStationQUAD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkStationStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="ActiveFlag" Type="bit" Nullable="false" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkStationType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkTownship">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkWQCCWaterShed">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkWSG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tlkWSR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trsChemParaMapColumns">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="TableName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ColName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RowID" Type="varchar" MaxLength="10" />
+    <Property Name="ChemParameter" Type="varchar" MaxLength="50" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UnknownSample">
+    <Key>
+      <PropertyRef Name="UnknownSampleID" />
+    </Key>
+    <Property Name="OrganizationID" Type="int" Nullable="false" />
+    <Property Name="UnknownSampleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SampleType" Type="varchar" MaxLength="25" />
+    <Property Name="SampleNumber" Type="varchar" MaxLength="10" />
+    <Property Name="DateSent" Type="datetime" />
+    <Property Name="Value1" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="Value2" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="MeanValue" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="TrueValue" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="Round" Type="int" />
+    <Property Name="Comment" Type="varchar" MaxLength="1000" />
+    <Property Name="OldValidated" Type="varchar" MaxLength="25" />
+    <Property Name="Path" Type="varchar" MaxLength="25" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="UserCreated" Type="varchar" MaxLength="25" />
+    <Property Name="DateLastModified" Type="datetime" />
+    <Property Name="UserLastModified" Type="varchar" MaxLength="25" />
+    <Property Name="BatchSampleNumber" Type="varchar" MaxLength="10" />
+    <Property Name="Valid" Type="bit" />
+    <Property Name="Validated" Type="bit" />
+    <Property Name="PctRecovery" Type="numeric" Precision="9" Scale="2" />
+  </EntityType>
+  <EntityContainer Name="RiverWatchModelStoreContainer">
+    <EntitySet Name="ControlPermissions" EntityType="Self.ControlPermissions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ErrorLog" EntityType="Self.ErrorLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FileStorage" EntityType="Self.FileStorage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GearConfig" EntityType="Self.GearConfig" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InboundICPFinal" EntityType="Self.InboundICPFinal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InboundICPOrigional" EntityType="Self.InboundICPOrigional" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InboundSamples" EntityType="Self.InboundSamples" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lachat" EntityType="Self.Lachat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MetalBarCode" EntityType="Self.MetalBarCode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NEWexpWater" EntityType="Self.NEWexpWater" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NutrientBarCode" EntityType="Self.NutrientBarCode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NutrientData" EntityType="Self.NutrientData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NutrientLimits" EntityType="Self.NutrientLimits" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrgStatus" EntityType="Self.OrgStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="project" EntityType="Self.project" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectStation" EntityType="Self.ProjectStation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Samples" EntityType="Self.Samples" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Station" EntityType="Self.Station" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblParticipant" EntityType="Self.tblParticipant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPartInfo" EntityType="Self.tblPartInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblProject" EntityType="Self.tblProject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblProjectStation" EntityType="Self.tblProjectStation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRegistration" EntityType="Self.tblRegistration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSampleXXXX" EntityType="Self.tblSampleXXXX" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTrainee" EntityType="Self.tblTrainee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUser" EntityType="Self.tblUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblWatercodes" EntityType="Self.tblWatercodes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblWatershedGrp" EntityType="Self.tblWatershedGrp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblWBKey" EntityType="Self.tblWBKey" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblXSReps" EntityType="Self.tblXSReps" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkActivityCategory" EntityType="Self.tlkActivityCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkActivityType" EntityType="Self.tlkActivityType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkBioResultsType" EntityType="Self.tlkBioResultsType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkCommunities" EntityType="Self.tlkCommunities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkCounty" EntityType="Self.tlkCounty" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkEcoRegion" EntityType="Self.tlkEcoRegion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkEquipCategory" EntityType="Self.tlkEquipCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkEquipItems" EntityType="Self.tlkEquipItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkFieldGear" EntityType="Self.tlkFieldGear" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkFieldProcedure" EntityType="Self.tlkFieldProcedure" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkGearConfig" EntityType="Self.tlkGearConfig" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkGrid" EntityType="Self.tlkGrid" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkHydroUnit" EntityType="Self.tlkHydroUnit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkLimits" EntityType="Self.tlkLimits" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkMetalBarCodeType" EntityType="Self.tlkMetalBarCodeType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkNutrientBarCodeType" EntityType="Self.tlkNutrientBarCodeType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkNutrientLimits" EntityType="Self.tlkNutrientLimits" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkOrganizationType" EntityType="Self.tlkOrganizationType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkPhysHabPara" EntityType="Self.tlkPhysHabPara" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkQUADI" EntityType="Self.tlkQUADI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkQuarterSection" EntityType="Self.tlkQuarterSection" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkRange" EntityType="Self.tlkRange" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkregion" EntityType="Self.tlkregion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkRiverWatchWaterShed" EntityType="Self.tlkRiverWatchWaterShed" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkSampleType" EntityType="Self.tlkSampleType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkSection" EntityType="Self.tlkSection" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkState" EntityType="Self.tlkState" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkStationQUAD" EntityType="Self.tlkStationQUAD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkStationStatus" EntityType="Self.tlkStationStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkStationType" EntityType="Self.tlkStationType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkTownship" EntityType="Self.tlkTownship" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkWQCCWaterShed" EntityType="Self.tlkWQCCWaterShed" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkWSG" EntityType="Self.tlkWSG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tlkWSR" EntityType="Self.tlkWSR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trsChemParaMapColumns" EntityType="Self.trsChemParaMapColumns" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UnknownSample" EntityType="Self.UnknownSample" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="organization" EntityType="Self.organization" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [organization].[ID] AS [ID], 
+    [organization].[KitNumber] AS [KitNumber], 
+    [organization].[OrganizationName] AS [OrganizationName], 
+    [organization].[OrganizationType] AS [OrganizationType], 
+    [organization].[Email] AS [Email], 
+    [organization].[MailingAddress] AS [MailingAddress], 
+    [organization].[ShippingAddress] AS [ShippingAddress], 
+    [organization].[City] AS [City], 
+    [organization].[State] AS [State], 
+    [organization].[Zip] AS [Zip], 
+    [organization].[Phone] AS [Phone], 
+    [organization].[Fax] AS [Fax], 
+    [organization].[YearStarted] AS [YearStarted], 
+    [organization].[WaterShed] AS [WaterShed], 
+    [organization].[WaterShedGathering] AS [WaterShedGathering], 
+    [organization].[Password] AS [Password], 
+    [organization].[Active] AS [Active], 
+    [organization].[DateCreated] AS [DateCreated], 
+    [organization].[UserCreated] AS [UserCreated], 
+    [organization].[DateLastModified] AS [DateLastModified], 
+    [organization].[UserLastModified] AS [UserLastModified], 
+    [organization].[Valid] AS [Valid]
+    FROM [dbo].[organization] AS [organization]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblXS" EntityType="Self.tblXS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblXS].[XSID] AS [XSID], 
+    [tblXS].[SampleID] AS [SampleID], 
+    [tblXS].[DistanceFromWQS] AS [DistanceFromWQS], 
+    [tblXS].[DistUnit] AS [DistUnit], 
+    [tblXS].[EnterDate] AS [EnterDate], 
+    [tblXS].[Comments] AS [Comments]
+    FROM [dbo].[tblXS] AS [tblXS]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

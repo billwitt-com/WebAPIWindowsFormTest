@@ -1,0 +1,1330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RiverWatchModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ControlPermission">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PageName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ControlID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoleValue" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Comments" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Valid" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ErrorLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Message" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FromPage" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="StackTrace" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Severity" Type="Int32" />
+    <Property Name="LoggedInUser" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Comment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FileStorage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Valid" Type="Boolean" Nullable="false" />
+    <Property Name="Content" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="GearConfig">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FieldGearID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valid" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InboundICPFinal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="tblSampleID" Type="Int32" />
+    <Property Name="DUPLICATE" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="AL_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="AL_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="AS_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="AS_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="CA_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="CA_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="CD_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="CD_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="CU_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="CU_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="FE_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="FE_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="PB_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="PB_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="MG_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="MG_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="MN_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="MN_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="SE_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="SE_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="ZN_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="ZN_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="NA_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="NA_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="K_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="K_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="ANADATE" Type="DateTime" Precision="3" />
+    <Property Name="COMPLETE" Type="Boolean" />
+    <Property Name="DATE_SENT" Type="DateTime" Precision="3" />
+    <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Valid" Type="Boolean" Nullable="false" />
+    <Property Name="Edited" Type="Boolean" Nullable="false" />
+    <Property Name="Saved" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InboundICPOrigional">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="tblSampleID" Type="Int32" />
+    <Property Name="DUPLICATE" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="AL_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="AL_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="AS_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="AS_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="CA_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="CA_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="CD_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="CD_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="CU_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="CU_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="FE_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="FE_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="PB_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="PB_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="MG_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="MG_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="MN_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="MN_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="SE_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="SE_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="ZN_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="ZN_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="NA_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="NA_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="K_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="K_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="ANADATE" Type="DateTime" Precision="3" />
+    <Property Name="COMPLETE" Type="Boolean" />
+    <Property Name="DATE_SENT" Type="DateTime" Precision="3" />
+    <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Valid" Type="Boolean" Nullable="false" />
+    <Property Name="Edited" Type="Boolean" Nullable="false" />
+    <Property Name="Saved" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InboundSample">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StationNum" Type="Int32" />
+    <Property Name="SampleID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="txtSampleID" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="KitNum" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Time" Type="Int32" />
+    <Property Name="USGSFlow" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="PH" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="TempC" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="PhenAlk" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="TotalAlk" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="TotalHard" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="DO" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="DOsat" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="Tag" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Chk" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="EntryType" Type="Int32" />
+    <Property Name="EntryStaff" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MetalsNormal" Type="Boolean" />
+    <Property Name="MetalsBlnk" Type="Boolean" />
+    <Property Name="MetalsDupe" Type="Boolean" />
+    <Property Name="Bugs" Type="Boolean" />
+    <Property Name="BugsQA" Type="Boolean" />
+    <Property Name="TSS" Type="Boolean" />
+    <Property Name="CS" Type="Boolean" />
+    <Property Name="NP" Type="Boolean" />
+    <Property Name="TSSDupe" Type="Boolean" />
+    <Property Name="CSDupe" Type="Boolean" />
+    <Property Name="NPDupe" Type="Boolean" />
+    <Property Name="FieldValid" Type="Boolean" />
+    <Property Name="MetalsStat" Type="Int32" />
+    <Property Name="FinalCheck" Type="Boolean" />
+    <Property Name="Method" Type="Int32" />
+    <Property Name="Comments" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="DateReceived" Type="DateTime" Precision="3" />
+    <Property Name="DataSheetIncluded" Type="Boolean" />
+    <Property Name="MissingDataSheetReqDate" Type="DateTime" Precision="3" />
+    <Property Name="ChainOfCustody" Type="Boolean" />
+    <Property Name="MissingDataSheetReceived" Type="Boolean" />
+    <Property Name="PassValStep" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="tblSampleID" Type="Int32" />
+    <Property Name="Valid" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Lachat">
+    <Key>
+      <PropertyRef Name="inbLachatID" />
+    </Key>
+    <Property Name="inbLachatID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Batch" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SampleType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SampleDescription" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Parameter" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Result" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="Unit" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="AnalDate" Type="DateTime" Precision="3" />
+    <Property Name="CONHI" Type="Boolean" />
+    <Property Name="RPDDivPctREC" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="CHANGED" Type="Boolean" />
+    <Property Name="NumChanged" Type="Int32" />
+    <Property Name="Comment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PassValStep" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="tblSampleID" Type="Int32" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="Validated" Type="Boolean" />
+    <Property Name="BlkDup" Type="Boolean" />
+    <Property Name="Failed" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="MetalBarCode">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SampleNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="NumberSample" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LabID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Filtered" Type="Boolean" Nullable="false" />
+    <Property Name="ContainMetal" Type="Boolean" Nullable="false" />
+    <Property Name="BoxNumber" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Verified" Type="Boolean" Nullable="false" />
+    <Property Name="LogDate" Type="DateTime" Precision="3" />
+    <Property Name="AnalyzeDate" Type="DateTime" Precision="3" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="SampleID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NEWexpWater">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tblSampleID" Type="Int32" />
+    <Property Name="SampleNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Event" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WaterShed" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="River_CD" Type="Double" />
+    <Property Name="RiverName" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+    <Property Name="KitNumber" Type="Int32" />
+    <Property Name="OrganizationName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OrganizationID" Type="Int32" />
+    <Property Name="StationNumber" Type="Int16" />
+    <Property Name="TypeCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="StationName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MetalsBarCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NutrientBarCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FieldBarCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BugsBarCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SampleDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="USGS_Flow" Type="Double" />
+    <Property Name="PH" Type="Double" />
+    <Property Name="TempC" Type="Double" />
+    <Property Name="PHEN_ALK" Type="Double" />
+    <Property Name="TOTAL_ALK" Type="Double" />
+    <Property Name="TOTAL_HARD" Type="Double" />
+    <Property Name="DO_MGL" Type="Double" />
+    <Property Name="DOSAT" Type="Int16" />
+    <Property Name="AL_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="AL_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="AS_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="AS_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="CA_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="CA_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="CD_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="CD_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="CU_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="CU_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="FE_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="FE_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="MG_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="MG_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="MN_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="MN_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="PB_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="PB_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="SE_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="SE_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="ZN_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="ZN_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="NA_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="NA_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="K_D" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="K_T" Type="Decimal" Precision="28" Scale="10" />
+    <Property Name="Rep" Type="Int32" />
+    <Property Name="Ammonia" Type="Double" />
+    <Property Name="Chloride" Type="Double" />
+    <Property Name="ChlorophyllA" Type="Double" />
+    <Property Name="DOC" Type="Double" />
+    <Property Name="NN" Type="Double" />
+    <Property Name="OP" Type="Double" />
+    <Property Name="Sulfate" Type="Double" />
+    <Property Name="totN" Type="Double" />
+    <Property Name="totP" Type="Double" />
+    <Property Name="TKN" Type="Double" />
+    <Property Name="orgN" Type="Double" />
+    <Property Name="TSS" Type="Double" />
+    <Property Name="Batch" Type="Int32" />
+    <Property Name="SampleComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FieldComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NutrientComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MetalsComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BugsComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BenthicsComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="BadBlank" Type="Boolean" />
+    <Property Name="BadDuplicate" Type="Boolean" />
+    <Property Name="BadSample" Type="Boolean" />
+    <Property Name="Valid" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NutrientBarCode">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SampleID" Type="Int32" />
+    <Property Name="SampleNumber" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="LabID" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Batch" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Done" Type="Boolean" />
+    <Property Name="LogDate" Type="DateTime" Precision="3" />
+    <Property Name="AnalyzeDate" Type="DateTime" Precision="3" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="TotalPhos" Type="Boolean" />
+    <Property Name="OrthoPhos" Type="Boolean" />
+    <Property Name="TotalNitro" Type="Boolean" />
+    <Property Name="NitrateNitrite" Type="Boolean" />
+    <Property Name="Ammonia" Type="Boolean" />
+    <Property Name="DOC" Type="Boolean" />
+    <Property Name="Chloride" Type="Boolean" />
+    <Property Name="Sulfate" Type="Boolean" />
+    <Property Name="TSS" Type="Boolean" />
+    <Property Name="ChlorA" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="NutrientData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BARCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Batch" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="TypeCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SampleNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TotalPhos" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="TotalPhos_CH" Type="Boolean" />
+    <Property Name="OrthoPhos" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="OrthoPhos_CH" Type="Boolean" />
+    <Property Name="TotalNitro" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="TotalNitro_CH" Type="Boolean" />
+    <Property Name="NitrateNitrite" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="NitrateNitrite_CH" Type="Boolean" />
+    <Property Name="Ammonia" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="Ammonia_CH" Type="Boolean" />
+    <Property Name="DOC" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="DOC_CH" Type="Boolean" />
+    <Property Name="Chloride" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="Chloride_CH" Type="Boolean" />
+    <Property Name="Sulfate" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="Sulfate_CH" Type="Boolean" />
+    <Property Name="TSS" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="TSS_CH" Type="Boolean" />
+    <Property Name="ChlorA" Type="Decimal" Precision="12" Scale="6" />
+    <Property Name="ChlorA_CH" Type="Boolean" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="Validated" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NutrientLimit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Element" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="RowID" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Reporting" Type="Decimal" Precision="16" Scale="4" />
+    <Property Name="MDL" Type="Decimal" Precision="16" Scale="4" />
+    <Property Name="DvsTDifference" Type="Decimal" Precision="16" Scale="4" />
+    <Property Name="HighLimit" Type="Decimal" Precision="16" Scale="4" />
+    <Property Name="DateCreated" Type="DateTime" Precision="0" />
+    <Property Name="UserCreated" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Valid" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="OrgStatu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrganizationID" Type="Int32" Nullable="false" />
+    <Property Name="ContractStartDate" Type="DateTime" Precision="3" />
+    <Property Name="ContractEndDate" Type="DateTime" Precision="3" />
+    <Property Name="ContractSigned" Type="Boolean" />
+    <Property Name="ContractSignedDate" Type="DateTime" Precision="3" />
+    <Property Name="SiteVisited" Type="Boolean" />
+    <Property Name="VolunteerTimeSheet1" Type="Boolean" />
+    <Property Name="VolunteerTimeShee2" Type="Boolean" />
+    <Property Name="VolunteerTimeSheet3" Type="Boolean" />
+    <Property Name="VolunteerTimeSheet4" Type="Boolean" />
+    <Property Name="DataEnteredElectronically1" Type="Boolean" />
+    <Property Name="DataEnteredElectronically2" Type="Boolean" />
+    <Property Name="DataEnteredElectronically3" Type="Boolean" />
+    <Property Name="DataEnteredElectronically4" Type="Boolean" />
+    <Property Name="SampleShipped1" Type="Boolean" />
+    <Property Name="SampleShipped2" Type="Boolean" />
+    <Property Name="SampleShipped3" Type="Boolean" />
+    <Property Name="SampleShipped4" Type="Boolean" />
+    <Property Name="NumberOfSamplesJan" Type="Int32" />
+    <Property Name="NumberOfSamplesFeb" Type="Int32" />
+    <Property Name="NumberOfSamplesMar" Type="Int32" />
+    <Property Name="NumberOfSamplesApr" Type="Int32" />
+    <Property Name="NumberOfSamplesMay" Type="Int32" />
+    <Property Name="NumberOfSamplesJun" Type="Int32" />
+    <Property Name="NumberOfSamplesJul" Type="Int32" />
+    <Property Name="NumberOfSamplesAug" Type="Int32" />
+    <Property Name="NumberOfSamplesSep" Type="Int32" />
+    <Property Name="NumberOfSamplesOct" Type="Int32" />
+    <Property Name="NumberOfSamplesNov" Type="Int32" />
+    <Property Name="NumberOfSamplesDec" Type="Int32" />
+    <Property Name="Nutrient1Collected" Type="Boolean" />
+    <Property Name="Nutrient2Collected" Type="Boolean" />
+    <Property Name="BugCollected" Type="Boolean" />
+    <Property Name="UnknownSpringRecordedDate" Type="DateTime" Precision="3" />
+    <Property Name="UnknownFallRecordedDate" Type="DateTime" Precision="3" />
+    <Property Name="NumberOfSamplesBlank" Type="Int32" />
+    <Property Name="NumberOfSamplesDuplicate" Type="Int32" />
+    <Property Name="TroubleComment" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="NoteComment" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="HardshipComment" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="NumberOfMetalsBlank" Type="Int32" />
+    <Property Name="NumberOfMetalsDuplicate" Type="Int32" />
+  </EntityType>
+  <EntityType Name="project">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProjectDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="StoretUploaded" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ProjectStation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int32" />
+    <Property Name="StationNumber" Type="Int32" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Valid" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Level" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DateCreated" Type="DateTime" Precision="0" />
+    <Property Name="Valid" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sample">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SampleID" Type="Int32" Nullable="false" />
+    <Property Name="StationID" Type="Int32" Nullable="false" />
+    <Property Name="OrganizationID" Type="Int32" />
+    <Property Name="SampleNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NumberSample" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DateCollected" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeCollected" Type="DateTime" Precision="3" />
+    <Property Name="DateReceived" Type="DateTime" Precision="3" />
+    <Property Name="DataSheetIncluded" Type="Boolean" Nullable="false" />
+    <Property Name="MissingDataSheetReqDate" Type="DateTime" Precision="3" />
+    <Property Name="ChainOfCustody" Type="Boolean" Nullable="false" />
+    <Property Name="MissingDataSheetReceived" Type="Boolean" Nullable="false" />
+    <Property Name="NoMetals" Type="Boolean" Nullable="false" />
+    <Property Name="PhysicalHabitat" Type="Boolean" Nullable="false" />
+    <Property Name="Bug" Type="Boolean" Nullable="false" />
+    <Property Name="NoNutrient" Type="Boolean" Nullable="false" />
+    <Property Name="TotalSuspendedSolids" Type="Boolean" Nullable="false" />
+    <Property Name="NitratePhosphorus" Type="Boolean" Nullable="false" />
+    <Property Name="DuplicatedTSS" Type="Boolean" Nullable="false" />
+    <Property Name="DuplicatedNP" Type="Boolean" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ChlorideSulfate" Type="Boolean" />
+    <Property Name="BlankMetals" Type="Boolean" />
+    <Property Name="DuplicatedMetals" Type="Boolean" />
+    <Property Name="BugsQA" Type="Boolean" />
+    <Property Name="DuplicatedCS" Type="Boolean" />
+    <Property Name="Valid" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Station">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StationNumber" Type="Int32" />
+    <Property Name="River" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+    <Property Name="AquaticModelIndex" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="WaterCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="WaterBodyID" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="StationType" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="QUADI" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Township" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Range" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Section" Type="Int32" />
+    <Property Name="QuaterSection" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Grid" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="StationQUAD" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="RWWaterShed" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="WQCCWaterShed" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="HydroUnit" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="EcoRegion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StationName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="StationStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Elevation" Type="Double" />
+    <Property Name="WaterShedRegion" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Longtitude" Type="Double" />
+    <Property Name="Latitude" Type="Double" />
+    <Property Name="County" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="NearCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Move" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="UTMX" Type="Double" />
+    <Property Name="UTMY" Type="Double" />
+    <Property Name="Region" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="USGS" Type="Boolean" />
+    <Property Name="StateEngineering" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="StoretUploaded" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblParticipant">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="OrganizationID" Type="Int32" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="YearSignedOn" Type="Int32" />
+    <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="Zip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="HomePhone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="HomeEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MailPreference" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="PrimaryContact" Type="Boolean" Nullable="false" />
+    <Property Name="Training" Type="Boolean" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tblPartInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ptNODE" Type="Int32" Nullable="false" />
+    <Property Name="ptPARENTNODE" Type="Int32" />
+    <Property Name="ptTEXT" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="ptDOCURL" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tblProject">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ProjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProjectDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="StoretUploaded" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tblProjectStation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int32" Nullable="false" />
+    <Property Name="StationID" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblRegistration">
+    <Key>
+      <PropertyRef Name="RegistrationID" />
+    </Key>
+    <Property Name="ParticipantID" Type="Int32" Nullable="false" />
+    <Property Name="RegistrationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegistrationDate" Type="DateTime" Precision="3" />
+    <Property Name="WorkShop" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Paid" Type="Boolean" Nullable="false" />
+    <Property Name="Receipt" Type="Boolean" Nullable="false" />
+    <Property Name="Attend" Type="Boolean" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblSampleXXXX">
+    <Key>
+      <PropertyRef Name="SampleID" />
+    </Key>
+    <Property Name="SampleID" Type="Int32" Nullable="false" />
+    <Property Name="StationID" Type="Int32" Nullable="false" />
+    <Property Name="OrganizationID" Type="Int32" />
+    <Property Name="SampleNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NumberSample" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DateCollected" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeCollected" Type="DateTime" Precision="3" />
+    <Property Name="DateReceived" Type="DateTime" Precision="3" />
+    <Property Name="DataSheetIncluded" Type="Boolean" Nullable="false" />
+    <Property Name="MissingDataSheetReqDate" Type="DateTime" Precision="3" />
+    <Property Name="ChainOfCustody" Type="Boolean" Nullable="false" />
+    <Property Name="MissingDataSheetReceived" Type="Boolean" Nullable="false" />
+    <Property Name="NoMetals" Type="Boolean" Nullable="false" />
+    <Property Name="PhysicalHabitat" Type="Boolean" Nullable="false" />
+    <Property Name="Bug" Type="Boolean" Nullable="false" />
+    <Property Name="NoNutrient" Type="Boolean" Nullable="false" />
+    <Property Name="TotalSuspendedSolids" Type="Boolean" Nullable="false" />
+    <Property Name="NitratePhosphorus" Type="Boolean" Nullable="false" />
+    <Property Name="DuplicatedTSS" Type="Boolean" Nullable="false" />
+    <Property Name="DuplicatedNP" Type="Boolean" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ChlorideSulfate" Type="Boolean" />
+    <Property Name="BlankMetals" Type="Boolean" />
+    <Property Name="DuplicatedMetals" Type="Boolean" />
+    <Property Name="BugsQA" Type="Boolean" />
+    <Property Name="DuplicatedCS" Type="Boolean" />
+    <Property Name="Valid" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tblTrainee">
+    <Key>
+      <PropertyRef Name="TraineeID" />
+    </Key>
+    <Property Name="TraineeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegistrationID" Type="Int32" Nullable="false" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sex" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Attend" Type="Boolean" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="UserName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Role" Type="Int32" />
+    <Property Name="DateLastActivity" Type="DateTime" Precision="3" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tblWatercode">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="WATERCODE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WATERNAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="STREAM" Type="Boolean" />
+    <Property Name="ACRESMILES" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="LOCATION" Type="String" MaxLength="31" FixedLength="false" Unicode="false" />
+    <Property Name="DRAINAGE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="DRAINNAME" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="HYDROCODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="COUNTY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="REGION" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="AWMAREA" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="STKCODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="BIOLOGIST" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="AREABIO" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="ADDLDATA" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="MAPCOORDIN" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="ATLASPAGE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CATEGORY" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ELEVATION" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="UT_ELEVATI" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="OWNERSHIP" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="WILDERNESS" Type="Boolean" />
+    <Property Name="BLMMAP" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="TOPOMAP" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="OBSOLETE" Type="Boolean" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tblWatershedGrp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="tvNODE" Type="Int32" Nullable="false" />
+    <Property Name="tvPARENTNODE" Type="Int32" />
+    <Property Name="tvTEXT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="tvIMAGEURL" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="tvDOCURL" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="tvSORTORDER" Type="Int32" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tblWBKey">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="WBID" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WATERSHED" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="BASIN" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SUBBASIN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="REGION" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="SEGMENT" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="DESIG" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="SegDesc" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="VerifyDate" Type="DateTime" Precision="3" />
+    <Property Name="Comment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tblXSRep">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="XSID" Type="Int32" Nullable="false" />
+    <Property Name="RepNum" Type="Int32" Nullable="false" />
+    <Property Name="Depth" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkActivityCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkActivityType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkBioResultsType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="0" />
+    <Property Name="UserLastModified" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkCommunity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="0" />
+    <Property Name="UserLastModified" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkCounty">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkEcoRegion">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkEquipCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkEquipItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HasSerial" Type="Boolean" Nullable="false" />
+    <Property Name="HasRejuv" Type="Boolean" Nullable="false" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkFieldGear">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="F5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkFieldProcedure">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkGearConfig">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FieldGearID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkGrid">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkHydroUnit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkLimit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Element" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="RowID" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Reporting" Type="Decimal" Precision="16" Scale="4" />
+    <Property Name="MDL" Type="Decimal" Precision="16" Scale="4" />
+    <Property Name="DvsTDifference" Type="Decimal" Precision="16" Scale="4" />
+    <Property Name="DateCreated" Type="DateTime" Precision="0" />
+    <Property Name="UserCreated" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Valid" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tlkMetalBarCodeType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkNutrientBarCodeType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkNutrientLimit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Element" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="RowID" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Reporting" Type="Decimal" Precision="16" Scale="4" />
+    <Property Name="MDL" Type="Decimal" Precision="16" Scale="4" />
+    <Property Name="DvsTDifference" Type="Decimal" Precision="16" Scale="4" />
+    <Property Name="DateCreated" Type="DateTime" Precision="0" />
+    <Property Name="UserCreated" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Valid" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tlkOrganizationType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkPhysHabPara">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="LongParameterName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ParameterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ParameterTypeI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ParameterTypeII" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RowID" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="CharGroupID" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dsOrder" Type="Int32" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkQUADI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkQuarterSection">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkRange">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkregion">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkRiverWatchWaterShed">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkSampleType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkSection">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkState">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkStationQUAD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkStationStatu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ActiveFlag" Type="Boolean" Nullable="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkStationType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkTownship">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkWQCCWaterShed">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkWSG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tlkWSR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="trsChemParaMapColumn">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="TableName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ColName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RowID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ChemParameter" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="UnknownSample">
+    <Key>
+      <PropertyRef Name="UnknownSampleID" />
+    </Key>
+    <Property Name="OrganizationID" Type="Int32" Nullable="false" />
+    <Property Name="UnknownSampleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SampleType" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="SampleNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DateSent" Type="DateTime" Precision="3" />
+    <Property Name="Value1" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="Value2" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="MeanValue" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="TrueValue" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="Round" Type="Int32" />
+    <Property Name="Comment" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="OldValidated" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Path" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="BatchSampleNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+    <Property Name="Validated" Type="Boolean" />
+    <Property Name="PctRecovery" Type="Decimal" Precision="9" Scale="2" />
+  </EntityType>
+  <EntityType Name="organization">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="OrganizationName" />
+      <PropertyRef Name="OrganizationType" />
+      <PropertyRef Name="Active" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KitNumber" Type="Int32" />
+    <Property Name="OrganizationName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OrganizationType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MailingAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ShippingAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="Zip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="YearStarted" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="WaterShed" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="WaterShedGathering" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="UserCreated" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DateLastModified" Type="DateTime" Precision="3" />
+    <Property Name="UserLastModified" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tblX">
+    <Key>
+      <PropertyRef Name="XSID" />
+    </Key>
+    <Property Name="XSID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SampleID" Type="Int32" />
+    <Property Name="DistanceFromWQS" Type="Int32" />
+    <Property Name="DistUnit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EnterDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="RiverWatchEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ControlPermissions" EntityType="Self.ControlPermission" />
+    <EntitySet Name="ErrorLogs" EntityType="Self.ErrorLog" />
+    <EntitySet Name="FileStorages" EntityType="Self.FileStorage" />
+    <EntitySet Name="GearConfigs" EntityType="Self.GearConfig" />
+    <EntitySet Name="InboundICPFinals" EntityType="Self.InboundICPFinal" />
+    <EntitySet Name="InboundICPOrigionals" EntityType="Self.InboundICPOrigional" />
+    <EntitySet Name="InboundSamples" EntityType="Self.InboundSample" />
+    <EntitySet Name="Lachats" EntityType="Self.Lachat" />
+    <EntitySet Name="MetalBarCodes" EntityType="Self.MetalBarCode" />
+    <EntitySet Name="NEWexpWaters" EntityType="Self.NEWexpWater" />
+    <EntitySet Name="NutrientBarCodes" EntityType="Self.NutrientBarCode" />
+    <EntitySet Name="NutrientDatas" EntityType="Self.NutrientData" />
+    <EntitySet Name="NutrientLimits" EntityType="Self.NutrientLimit" />
+    <EntitySet Name="OrgStatus" EntityType="Self.OrgStatu" />
+    <EntitySet Name="projects" EntityType="Self.project" />
+    <EntitySet Name="ProjectStations" EntityType="Self.ProjectStation" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <EntitySet Name="Samples" EntityType="Self.Sample" />
+    <EntitySet Name="Stations" EntityType="Self.Station" />
+    <EntitySet Name="tblParticipants" EntityType="Self.tblParticipant" />
+    <EntitySet Name="tblPartInfoes" EntityType="Self.tblPartInfo" />
+    <EntitySet Name="tblProjects" EntityType="Self.tblProject" />
+    <EntitySet Name="tblProjectStations" EntityType="Self.tblProjectStation" />
+    <EntitySet Name="tblRegistrations" EntityType="Self.tblRegistration" />
+    <EntitySet Name="tblSampleXXXXes" EntityType="Self.tblSampleXXXX" />
+    <EntitySet Name="tblTrainees" EntityType="Self.tblTrainee" />
+    <EntitySet Name="tblUsers" EntityType="Self.tblUser" />
+    <EntitySet Name="tblWatercodes" EntityType="Self.tblWatercode" />
+    <EntitySet Name="tblWatershedGrps" EntityType="Self.tblWatershedGrp" />
+    <EntitySet Name="tblWBKeys" EntityType="Self.tblWBKey" />
+    <EntitySet Name="tblXSReps" EntityType="Self.tblXSRep" />
+    <EntitySet Name="tlkActivityCategories" EntityType="Self.tlkActivityCategory" />
+    <EntitySet Name="tlkActivityTypes" EntityType="Self.tlkActivityType" />
+    <EntitySet Name="tlkBioResultsTypes" EntityType="Self.tlkBioResultsType" />
+    <EntitySet Name="tlkCommunities" EntityType="Self.tlkCommunity" />
+    <EntitySet Name="tlkCounties" EntityType="Self.tlkCounty" />
+    <EntitySet Name="tlkEcoRegions" EntityType="Self.tlkEcoRegion" />
+    <EntitySet Name="tlkEquipCategories" EntityType="Self.tlkEquipCategory" />
+    <EntitySet Name="tlkEquipItems" EntityType="Self.tlkEquipItem" />
+    <EntitySet Name="tlkFieldGears" EntityType="Self.tlkFieldGear" />
+    <EntitySet Name="tlkFieldProcedures" EntityType="Self.tlkFieldProcedure" />
+    <EntitySet Name="tlkGearConfigs" EntityType="Self.tlkGearConfig" />
+    <EntitySet Name="tlkGrids" EntityType="Self.tlkGrid" />
+    <EntitySet Name="tlkHydroUnits" EntityType="Self.tlkHydroUnit" />
+    <EntitySet Name="tlkLimits" EntityType="Self.tlkLimit" />
+    <EntitySet Name="tlkMetalBarCodeTypes" EntityType="Self.tlkMetalBarCodeType" />
+    <EntitySet Name="tlkNutrientBarCodeTypes" EntityType="Self.tlkNutrientBarCodeType" />
+    <EntitySet Name="tlkNutrientLimits" EntityType="Self.tlkNutrientLimit" />
+    <EntitySet Name="tlkOrganizationTypes" EntityType="Self.tlkOrganizationType" />
+    <EntitySet Name="tlkPhysHabParas" EntityType="Self.tlkPhysHabPara" />
+    <EntitySet Name="tlkQUADIs" EntityType="Self.tlkQUADI" />
+    <EntitySet Name="tlkQuarterSections" EntityType="Self.tlkQuarterSection" />
+    <EntitySet Name="tlkRanges" EntityType="Self.tlkRange" />
+    <EntitySet Name="tlkregions" EntityType="Self.tlkregion" />
+    <EntitySet Name="tlkRiverWatchWaterSheds" EntityType="Self.tlkRiverWatchWaterShed" />
+    <EntitySet Name="tlkSampleTypes" EntityType="Self.tlkSampleType" />
+    <EntitySet Name="tlkSections" EntityType="Self.tlkSection" />
+    <EntitySet Name="tlkStates" EntityType="Self.tlkState" />
+    <EntitySet Name="tlkStationQUADs" EntityType="Self.tlkStationQUAD" />
+    <EntitySet Name="tlkStationStatus" EntityType="Self.tlkStationStatu" />
+    <EntitySet Name="tlkStationTypes" EntityType="Self.tlkStationType" />
+    <EntitySet Name="tlkTownships" EntityType="Self.tlkTownship" />
+    <EntitySet Name="tlkWQCCWaterSheds" EntityType="Self.tlkWQCCWaterShed" />
+    <EntitySet Name="tlkWSGs" EntityType="Self.tlkWSG" />
+    <EntitySet Name="tlkWSRs" EntityType="Self.tlkWSR" />
+    <EntitySet Name="trsChemParaMapColumns" EntityType="Self.trsChemParaMapColumn" />
+    <EntitySet Name="UnknownSamples" EntityType="Self.UnknownSample" />
+    <EntitySet Name="organizations" EntityType="Self.organization" />
+    <EntitySet Name="tblXS" EntityType="Self.tblX" />
+  </EntityContainer>
+</Schema>
